@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe regression is most likely caused by `Field.contribute_to_class()` installing `get_%s_display` with `setattr` after the model class body has already been created, which can overwrite a user-defined `get_foo_bar_display()` method. `ModelBase.__new__()` and `_prepare()` are the surrounding class-construction path that makes this timing possible, while `Model._get_FIELD_display()` is only the shared fallback implementation and is unlikely to be the direct bug.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "_prepare"
+        }
+    ]
+}

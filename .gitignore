@@ -1,0 +1,6 @@
+work/
+**/key.cfg
+**/__pycache__/
+**/*.pyc
+.DS_Store
+

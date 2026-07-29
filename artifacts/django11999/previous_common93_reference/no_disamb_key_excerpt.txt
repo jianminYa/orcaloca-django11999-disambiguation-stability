@@ -1,0 +1,14 @@
+Orcar.search_agent - INFO] Is early stop: False similarity: True
+[2026-07-23 16:20:37,614 - Orcar.search_agent - INFO] Is complete: False
+[2026-07-23 16:20:37,614 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'contribute_to_class'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}
+)
+[2026-07-23 16:20:37,638 - Orcar.search_agent - DEBUG] Search content: [ChatMessage(role=<MessageRole.USER: 'user'>, additional_kwargs={}, blocks=[TextBlock(block_type='text', text="Please provide observation feedback and new_search_actions on the search results below. \n<New Info>\n\n            Search Action: search_callable\n\n            Search Action Input: {'query_name': 'contribute_to_class'}\n\n            <Disambiguation>\nMultiple matched callables found about query contribute_to_class. \nPossible Location 1:\nFile Path: django/contrib/contenttypes/fields.py\nContaining Class: GenericForeignKey\n\nPossible Location 2:\nFile Path: django/contrib/contenttypes/fields.py\nContaining Class: GenericRelation\n\nPossible Location 3:\nFile Path: django/contrib/gis/db/models/fields.py\nContaining Class: GeometryField\n\nPossible Location 4:\nFile Path: django/contrib/gis/db/models/fields.py\nContaining Class: RasterField\n\nPossible Location 5:\nFile Path: django/db/models/options.py\nContaining Class: Options\n\nPossible Location 6:\nFile Path: django/db/models/manager.py\nContaining Class: BaseManager\n\nPossible Location 7:\nFile Path: django/db/models/fields/related.py\nContaining Class: RelatedField\n\nPossible Location 8:\nFile Path: django/db/models/fields/related.py\nContaining Class: ForeignObject\n\nPossible Location 9:\nFile Path: django/db/models/fields/related.py\nContaining Class: ManyToManyField\n\nPossible Location 10:\nFile Path: django/db/models/fields/__init__.py\nContaining Class: Field\n\nPossible Location 11:\nFile Path: django/db/models/fields/__init_

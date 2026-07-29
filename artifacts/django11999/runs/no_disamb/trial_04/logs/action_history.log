@@ -1,0 +1,251 @@
+[2026-07-29 15:54:07,620 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 1
+)
+[2026-07-29 15:54:26,543 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 1
+)
+[2026-07-29 15:54:35,653 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+)
+[2026-07-29 15:54:40,674 - action_history - INFO] Top file functions: [SearchActionStep(search_action='search_callable', search_action_input={'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'})]
+[2026-07-29 15:54:44,472 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 1
+)
+[2026-07-29 15:54:59,480 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 1
+)
+[2026-07-29 15:55:11,892 - action_history - INFO] Top file functions: [SearchActionStep(search_action='search_callable', search_action_input={'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'})]
+[2026-07-29 15:55:18,984 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+)
+[2026-07-29 15:55:25,339 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 3
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 2
+)
+[2026-07-29 15:55:31,557 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 3
+)
+[2026-07-29 15:55:37,832 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 3
+)
+[2026-07-29 15:55:41,033 - action_history - INFO] Top class methods: [SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'ModelStateFieldsCacheDescriptor', 'method_name': '__get__', 'file_path': 'django/db/models/base.py'})]
+[2026-07-29 15:55:51,373 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelStateFieldsCacheDescriptor', 'method_name': '__get__', 'file_path': 'django/db/models/base.py'}: 2
+)
+[2026-07-29 15:56:02,592 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelStateFieldsCacheDescriptor', 'method_name': '__get__', 'file_path': 'django/db/models/base.py'}: 2
+)
+[2026-07-29 15:56:08,717 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_<field_name>_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 4
+  Search Action: search_callable
+Search Action Input: {'query_name': 'ModelStateFieldsCacheDescriptor', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelStateFieldsCacheDescriptor', 'method_name': '__get__', 'file_path': 'django/db/models/base.py'}: 2
+)

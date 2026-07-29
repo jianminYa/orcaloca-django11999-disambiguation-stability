@@ -1,0 +1,78 @@
+Traceback (most recent call last):
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/agent.py", line 275, in run_agents
+    trace_analysis_output = self.run_trace_analysis_agent()
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/agent.py", line 111, in run_trace_analysis_agent
+    response: AgentChatResponse = self.trace_analysis_agent.chat(
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/instrumentation/dispatcher.py", line 323, in wrapper
+    result = func(*args, **kwargs)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/callbacks/utils.py", line 42, in wrapper
+    return func(self, *args, **kwargs)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/agent/runner/base.py", line 695, in chat
+    chat_response = self._chat(
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/instrumentation/dispatcher.py", line 323, in wrapper
+    result = func(*args, **kwargs)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/agent/runner/base.py", line 627, in _chat
+    cur_step_output = self._run_step(
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/instrumentation/dispatcher.py", line 323, in wrapper
+    result = func(*args, **kwargs)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/agent/runner/base.py", line 423, in _run_step
+    cur_step_output = self.agent_worker.run_step(step, task, **kwargs)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/instrumentation/dispatcher.py", line 323, in wrapper
+    result = func(*args, **kwargs)
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/trace_analysis_agent.py", line 604, in run_step
+    return self._run_step(step, task)
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/trace_analysis_agent.py", line 561, in _run_step
+    new_steps = self.handle_step(step, task)
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/trace_analysis_agent.py", line 505, in handle_step
+    return self.handle_step_judge(step, task)
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/trace_analysis_agent.py", line 344, in handle_step_judge
+    judge_step: TraceAnalysisJudgeStep = self._output_parser.parse(
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/llama_index/core/instrumentation/dispatcher.py", line 323, in wrapper
+    result = func(*args, **kwargs)
+  File "[REPO_ROOT]/work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/Orcar/output_parser.py", line 281, in parse
+    json_obj: Dict = json.loads(output.replace("\\", r"\\"), strict=False)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "[CONDA_PREFIX]/envs/orca/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3561.76it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2352.94it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  91%|█████████ | 181/199 [00:00<00:00, 1785.01it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1864.65it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2093.06it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  98%|█████████▊| 195/199 [00:00<00:00, 1949.62it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1969.84it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2993.20it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2069.50it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2029.70it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2058.00it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2675.22it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2339.56it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2168.35it/s]

@@ -1,0 +1,219 @@
+[2026-07-29 14:48:20,801 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:48:39,395 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 14:48:57,310 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 14:49:11,780 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:49:27,226 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+)
+[2026-07-29 14:50:21,087 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_field_name_clashes', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-29 14:50:52,287 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_field_name_clashes', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+)
+[2026-07-29 14:51:18,232 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_field_name_clashes', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 14:51:55,710 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_field_name_clashes', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:52:10,360 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:52:49,316 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'is_value', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:53:07,915 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'is_value', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:53:26,738 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'is_value', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/forms/fields.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:53:54,120 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'is_value', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/forms/fields.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:54:12,488 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/forms/fields.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:54:34,702 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/forms/fields.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'field.py', 'directory_path': 'django/contrib/gis/gdal'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 14:55:13,722 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'field.py', 'directory_path': 'django/contrib/gis/gdal'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'fields.py', 'directory_path': 'django/forms'}
+)
+[2026-07-29 14:55:46,625 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'fields.py', 'directory_path': 'django/forms'}
+)
+[2026-07-29 14:55:46,641 - search_queue - INFO] Duplicate search result: search_action='search_method_in_class' search_action_input={'class_name': 'Model', 'method_name': '_get_FIELD_display'} search_content='File Path: django/db/models/base.py \nMethod Content: \n    def _get_FIELD_display(self, field):\n        value = getattr(self, field.attname)\n        # force_str() to coerce lazy strings.\n        return force_str(dict(field.flatchoices).get(value, value), strings_only=True)\n'

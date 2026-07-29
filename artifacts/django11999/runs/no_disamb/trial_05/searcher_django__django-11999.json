@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe regression is localized to Django model class construction and field contribution. `ModelBase.__new__()` routes contributable attributes through `add_to_class()`, and `Field.contribute_to_class()` unconditionally assigns `get_%s_display` whenever `choices` is present, which can overwrite a user-defined `get_foo_bar_display()` method on the model.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "add_to_class"
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+diff --git a/Orcar/environment/benchmark.py b/Orcar/environment/benchmark.py
+index 01d5f0a..5897596 100644
+--- a/Orcar/environment/benchmark.py
++++ b/Orcar/environment/benchmark.py
+@@ -35,6 +35,7 @@ def reset_cached_repo(repo_path, base_commit="HEAD"):
+     """
+     cmds = [
+         f"git reset --hard {base_commit}",
++        "git clean -fdx",
+         f"git submodule update --init --recursive --force",
+         f"git submodule deinit -f --all",
+         f"rm -rf .git/modules/*",
+diff --git a/Orcar/formatter.py b/Orcar/formatter.py
+index bec970c..be20935 100644
+--- a/Orcar/formatter.py
++++ b/Orcar/formatter.py
+@@ -84,7 +84,10 @@ class TokenCounter:
+     def __init__(self, llm: LLM) -> None:
+         model = llm.metadata.model_name
+         if isinstance(llm, OpenAI):
+-            self.encoding = tiktoken.encoding_for_model(model)
++            try:
++                self.encoding = tiktoken.encoding_for_model(model)
++            except KeyError:
++                self.encoding = tiktoken.get_encoding("o200k_base")
+         elif isinstance(llm, Anthropic):
+             self.encoding = llm.tokenizer
+         elif isinstance(llm, Vertex):
+diff --git a/Orcar/gen_config.py b/Orcar/gen_config.py
+index 99d5a9c..cf378b1 100644
+--- a/Orcar/gen_config.py
++++ b/Orcar/gen_config.py
+@@ -1,20 +1,83 @@
+ import os
+ 
+ import config
++from llama_index.core.base.llms.types import LLMMetadata, MessageRole
+ from google.oauth2 import service_account
+ from llama_index.core.llms.llm import LLM
+ from llama_index.llms.anthropic import Anthropic
+ from llama_index.llms.openai import OpenAI
++from llama_index.llms.openai.utils import (
++    is_chat_model,
++    is_function_calling_model,
++    openai_modelname_to_contextsize,
++)
+ from llama_index.llms.vertex import Vertex
+ 
+ from .utils import VertexAnthropicWithCredentials
+ 
+ 
++OPENAI_BASE_URL_KEYS = (
++    "OPENAI_BASE_URL",
++    "BASE_URL",
++    "API_BASE_URL",
++    "OPENAI_API_BASE",
++)
++
++
++class OpenAICompatible(OpenAI):
++    @property
++    def metadata(self) -> LLMMetadata:
++        try:
++            context_window = openai_modelname_to_contextsize(self._get_model_name())
++            is_known_chat_model = is_chat_model(model=self._get_model_name())
++            is_known_function_calling_model = is_function_calling_model(
++                model=self._get_model_name()
++            )
++        except ValueError:
++            context_window = 128000
++            is_known_chat_model = self._get_model_name().startswith("gpt")
++            is_known_function_calling_model = False
++        return LLMMetadata(
++            context_window=context_window,
++            num_output=self.max_tokens or -1,
++            is_chat_model=is_known_chat_model,
++            is_function_calling_model=is_known_function_calling_model,
++            model_name=self.model,
++            system_role=MessageRole.SYSTEM,
++        )
++
++
++def _get_openai_api_base(orcar_config: "Config") -> str:
++    for key in OPENAI_BASE_URL_KEYS:
++        try:
++            value = orcar_config[key]
++        except KeyError:
++            value = ""
++        if value:
++            return value
++    return ""
++
++
++def _load_key_value_config(file_path: str) -> dict:
++    values = {}
++    with open(file_path) as f:
++        for line in f:
++            line = line.strip()
++            if not line or line.startswith("#") or "=" not in line:
++                continue
++            key, value = line.split("=", 1)
++            values[key.strip()] = value.strip()
++    return values
++
++
+ class Config:
+     def __init__(self, file_path=None, provider=None):
+         self.file_path = file_path
+         if self.file_path and os.path.isfile(self.file_path):
+-            self.file_config = config.Config(self.file_path)
++            try:
++                self.file_config = config.Config(self.file_path)
++            except config.ConfigFormatError:
++                self.file_config = _load_key_value_config(self.file_path)
+         else:
+             self.file_config = dict()
+         self.fallback_config = dict()
+@@ -65,7 +128,10 @@ def get_llm(**kwargs) -> LLM:
+             LLM_func = Anthropic
+     elif model.startswith("gpt"):
+         kwargs["api_key"] = orcar_config["OPENAI_API_KEY"]
+-        LLM_func = OpenAI
++        api_base = _get_openai_api_base(orcar_config)
++        if api_base:
++            kwargs["api_base"] = api_base
++        LLM_func = OpenAICompatible
+     elif model.startswith("gemini"):
+         # Load Google Cloud credentials
+         service_account_path = orcar_config["VERTEX_SERVICE_ACCOUNT_PATH"]
+diff --git a/Orcar/output_parser.py b/Orcar/output_parser.py
+index 3b2fa04..705df55 100644
+--- a/Orcar/output_parser.py
++++ b/Orcar/output_parser.py
+@@ -116,8 +116,26 @@ def load_with_escape(input_text: str) -> dict:
+     # Apply the regex with the replacement function
+     input_text = re.sub(pattern, replace_match, input_text)
+ 
+-    # Parse JSON
+-    data = json.loads(input_text)
++    # Parse JSON. Some OpenAI-compatible models may emit two adjacent JSON
++    # objects despite response_format=json_object; use the semantic object.
++    try:
++        data = json.loads(input_text)
++    except json.JSONDecodeError as exc:
++        decoder = json.JSONDecoder()
++        parsed_objects = []
++        for match in re.finditer(r"\{", input_text):
++            try:
++                parsed_object, _ = decoder.raw_decode(input_text, match.start())
++            except json.JSONDecodeError:
++                continue
++            if isinstance(parsed_object, dict):
++                parsed_objects.append(parsed_object)
++        for parsed_object in reversed(parsed_objects):
++            if "observation_feedback" in parsed_object:
++                return parsed_object
++        if not parsed_objects:
++            raise exc
++        data = parsed_objects[-1]
+ 
+     return data
+ 
+diff --git a/evaluation/process_output.py b/evaluation/process_output.py
+index 1bead8b..9cbf10a 100644
+--- a/evaluation/process_output.py
++++ b/evaluation/process_output.py
+@@ -19,7 +19,7 @@ logger = get_logger(__name__)
+ 
+ args_dict = {
+     "model": "claude-3-5-sonnet-20241022",
+-    "image": "sweagent/swe-agent:latest",
++    "image": "hejiaz/swe-agent:latest",
+     "dataset": "princeton-nlp/SWE-bench_Lite",
+     "persistent": True,
+     "container_name": "test_0",

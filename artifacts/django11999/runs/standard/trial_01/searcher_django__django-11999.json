@@ -1,0 +1,10 @@
+{
+    "conclusion": "<Observation>\nThe regression is now most strongly localized to `Field.contribute_to_class()` in `django/db/models/fields/__init__.py`. That method unconditionally assigns `get_<field>_display` with `setattr(...)` whenever `choices` is present, so it can overwrite a user-defined method with the same name. `ModelBase.__new__()` confirms model-defined attrs are collected before field contribution, which matches the observed override loss. `Model._get_FIELD_display()` is only the formatter and is not the source of the bug.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        }
+    ]
+}

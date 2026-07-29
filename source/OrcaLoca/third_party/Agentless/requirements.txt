@@ -1,0 +1,9 @@
+anthropic==0.42.0
+openai==1.58.1
+pre-commit==4.0.1
+datasets==3.2.0
+tiktoken==0.8.0
+libcst==1.5.1
+llama-index==0.12.8
+jsonlines==4.0.0
+swebench==2.1.7

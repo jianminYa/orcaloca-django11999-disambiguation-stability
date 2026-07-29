@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe regression is most likely in the model/field class-construction path, not in the descriptor cache. `Field.contribute_to_class()` unconditionally assigns `get_%s_display` with `partialmethod(...)` when `choices` is present, which would shadow a user-defined `get_foo_bar_display()` during model creation. `ModelBase.__new__()` and `ModelBase.add_to_class()` are the surrounding assembly points that control when that overwrite happens. `Model._get_FIELD_display()` still looks like the intended fallback implementation, and `cached_property.__get__()` appears unrelated to the override loss.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "add_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        }
+    ]
+}

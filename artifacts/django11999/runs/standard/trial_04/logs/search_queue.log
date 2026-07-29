@@ -1,0 +1,207 @@
+[2026-07-29 15:48:35,637 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-29 15:49:08,909 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+)
+[2026-07-29 15:49:39,346 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+)
+[2026-07-29 15:50:04,436 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_local_fields', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'save', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 15:50:11,322 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_local_fields', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'save', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 15:50:25,536 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_local_fields', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'save', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}
+)
+[2026-07-29 15:50:25,582 - search_queue - INFO] Duplicate search result: search_action='search_class' search_action_input={'class_name': 'Model'} search_content='File Path: django/db/models/base.py \nClass Skeleton: \nClass Signature: Model\nDocstring: None\n\nMethod: __init__\nMethod Signature: __init__(self)\nDocstring: None\n\nMethod: from_db\nMethod Signature: from_db(cls, db, field_names, values)\nDocstring: None\n\nMethod: __repr__\nMethod Signature: __repr__(self)\nDocstring: None\n\nMethod: __str__\nMethod Signature: __str__(self)\nDocstring: None\n\nMethod: __eq__\nMethod Signature: __eq__(self, other)\nDocstring: None\n\nMethod: __hash__\nMethod Signature: __hash__(self)\nDocstring: None\n\nMethod: __reduce__\nMethod Signature: __reduce__(self)\nDocstring: None\n\nMethod: __getstate__\nMethod Signature: __getstate__(self)\nDocstring: Hook to allow choosing the attributes to pickle.\n\nMethod: __setstate__\nMethod Signature: __setstate__(self, state)\nDocstring: None\n\nMethod: _get_pk_val\nMethod Signature: _get_pk_val(self, meta)\nDocstring: None\n\nMethod: _set_pk_val\nMethod Signature: _set_pk_val(self, value)\nDocstring: None\n\nMethod: get_deferred_fields\nMethod Signature: get_deferred_fields(self)\nDocstring: Return a set containing names of deferred fields for this instance.\n\nMethod: refresh_from_db\nMethod Signature: refresh_from_db(self, using, fields)\nDocstring: Reload field values from the database.\n\nBy default, the reloading happens from the database this instance was\nloaded from, or by the read router if this instance wasn\'t loaded from\nany database. The using parameter will override the default.\n\nFields can be used to specify which fields to reload. The fields\nshould be an iterable of field attnames. If fields is None, then\nall non-deferred fields are reloaded.\n\nWhen accessing deferred fields of an instance, the deferred loading\nof the field will call this method.\n\nMethod: serializable_value\nMethod Signature: serializable_value(self, field_name)\nDocstring: Return the value of the field name for this instance. If the field is\na foreign key, return the id value instead of the object. If there\'s\nno Field object with this name on the model, return the model\nattribute\'s value.\n\nUsed to serialize a field\'s value (in the serializer, or form output,\nfor example). Normally, you would just access the attribute directly\nand not use this method.\n\nMethod: save\nMethod Signature: save(self, force_insert, force_update, using, update_fields)\nDocstring: Save the current instance. Override this in a subclass if you want to\ncontrol the saving process.\n\nThe \'force_insert\' and \'force_update\' parameters can be used to insist\nthat the "save" must be an SQL insert or update (or equivalent for\nnon-SQL backends), respectively. Normally, they should not be set.\n\nMethod: save_base\nMethod Signature: save_base(self, raw, force_insert, force_update, using, update_fields)\nDocstring: Handle the parts of saving which should be done only once per save,\nyet need to be done in raw saves, too. This includes some sanity\nchecks and signal sending.\n\nThe \'raw\' argument is telling save_base not to save any parent\nmodels and not to do any changes to the values before save. This\nis used by fixture loading.\n\nMethod: _save_parents\nMethod Signature: _save_parents(self, cls, using, update_fields)\nDocstring: Save all the parents of cls using values from self.\n\nMethod: _save_table\nMethod Signature: _save_table(self, raw, cls, force_insert, force_update, using, update_fields)\nDocstring: Do the heavy-lifting involved in saving. Update or insert the data\nfor a single table.\n\nMethod: _do_update\nMethod Signature: _do_update(self, base_qs, using, pk_val, values, update_fields, forced_update)\nDocstring: Try to update the model. Return True if the model was updated (if an\nupdate query was done and a matching row was found in the DB).\n\nMethod: _do_insert\nMethod Signature: _do_insert(self, manager, using, fields, returning_fields, raw)\nDocstring: Do an INSERT. If returning_fields is defined then this method should\nreturn the newly created data for the model.\n\nMethod: delete\nMethod Signature: delete(self, using, keep_parents)\nDocstring: None\n\nMethod: _get_FIELD_display\nMethod Signature: _get_FIELD_display(self, field)\nDocstring: None\n\nMethod: _get_next_or_previous_by_FIELD\nMethod Signature: _get_next_or_previous_by_FIELD(self, field, is_next)\nDocstring: None\n\nMethod: _get_next_or_previous_in_order\nMethod Signature: _get_next_or_previous_in_order(self, is_next)\nDocstring: None\n\nMethod: prepare_database_save\nMethod Signature: prepare_database_save(self, field)\nDocstring: None\n\nMethod: clean\nMethod Signature: clean(self)\nDocstring: Hook for doing any extra model-wide validation after clean() has been\ncalled on every field by self.clean_fields. Any ValidationError raised\nby this method will not be associated with a particular field; it will\nhave a special-case association with the field defined by NON_FIELD_ERRORS.\n\nMethod: validate_unique\nMethod Signature: validate_unique(self, exclude)\nDocstring: Check unique constraints on the model and raise ValidationError if any\nfailed.\n\nMethod: _get_unique_checks\nMethod Signature: _get_unique_checks(self, exclude)\nDocstring: Return a list of checks to perform. Since validate_unique() could be\ncalled from a ModelForm, some fields may have been excluded; we can\'t\nperform a unique check on a model that is missing fields involved\nin that check. Fields that did not validate should also be excluded,\nbut they need to be passed in via the exclude argument.\n\nMethod: _perform_unique_checks\nMethod Signature: _perform_unique_checks(self, unique_checks)\nDocstring: None\n\nMethod: _perform_date_checks\nMethod Signature: _perform_date_checks(self, date_checks)\nDocstring: None\n\nMethod: date_error_message\nMethod Signature: date_error_message(self, lookup_type, field_name, unique_for)\nDocstring: None\n\nMethod: unique_error_message\nMethod Signature: unique_error_message(self, model_class, unique_check)\nDocstring: None\n\nMethod: full_clean\nMethod Signature: full_clean(self, exclude, validate_unique)\nDocstring: Call clean_fields(), clean(), and validate_unique() on the model.\nRaise a ValidationError for any errors that occur.\n\nMethod: clean_fields\nMethod Signature: clean_fields(self, exclude)\nDocstring: Clean all fields and raise a ValidationError containing a dict\nof all validation errors if any occur.\n\nMethod: check\nMethod Signature: check(cls)\nDocstring: None\n\nMethod: _check_swappable\nMethod Signature: _check_swappable(cls)\nDocstring: Check if the swapped model exists.\n\nMethod: _check_model\nMethod Signature: _check_model(cls)\nDocstring: None\n\nMethod: _check_managers\nMethod Signature: _check_managers(cls)\nDocstring: Perform all manager checks.\n\nMethod: _check_fields\nMethod Signature: _check_fields(cls)\nDocstring: Perform all field checks.\n\nMethod: _check_m2m_through_same_relationship\nMethod Signature: _check_m2m_through_same_relationship(cls)\nDocstring: Check if no relationship model is used by more than one m2m field.\n        \n\nMethod: _check_id_field\nMethod Signature: _check_id_field(cls)\nDocstring: Check if `id` field is a primary key.\n\nMethod: _check_field_name_clashes\nMethod Signature: _check_field_name_clashes(cls)\nDocstring: Forbid field shadowing in multi-table inheritance.\n\nMethod: _check_column_name_clashes\nMethod Signature: _check_column_name_clashes(cls)\nDocstring: None\n\nMethod: _check_model_name_db_lookup_clashes\nMethod Signature: _check_model_name_db_lookup_clashes(cls)\nDocstring: None\n\nMethod: _check_property_name_related_field_accessor_clashes\nMethod Signature: _check_property_name_related_field_accessor_clashes(cls)\nDocstring: None\n\nMethod: _check_single_primary_key\nMethod Signature: _check_single_primary_key(cls)\nDocstring: None\n\nMethod: _check_index_together\nMethod Signature: _check_index_together(cls)\nDocstring: Check the value of "index_together" option.\n\nMethod: _check_unique_together\nMethod Signature: _check_unique_together(cls)\nDocstring: Check the value of "unique_together" option.\n\nMethod: _check_indexes\nMethod Signature: _check_indexes(cls)\nDocstring: Check the fields and names of indexes.\n\nMethod: _check_local_fields\nMethod Signature: _check_local_fields(cls, fields, option)\nDocstring: None\n\nMethod: _check_ordering\nMethod Signature: _check_ordering(cls)\nDocstring: Check "ordering" option -- is it a list of strings and do all fields\nexist?\n\nMethod: _check_long_column_names\nMethod Signature: _check_long_column_names(cls)\nDocstring: Check that any auto-generated column names are shorter than the limits\nfor each database in which the model will be created.\n\nMethod: _check_constraints\nMethod Signature: _check_constraints(cls)\nDocstring: None\n'
+[2026-07-29 15:50:25,600 - search_queue - INFO] Duplicate search result: search_action='search_method_in_class' search_action_input={'class_name': 'Model', 'method_name': '_get_FIELD_display'} search_content='File Path: django/db/models/base.py \nMethod Content: \n    def _get_FIELD_display(self, field):\n        value = getattr(self, field.attname)\n        # force_str() to coerce lazy strings.\n        return force_str(dict(field.flatchoices).get(value, value), strings_only=True)\n'
+[2026-07-29 15:50:42,897 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_check_local_fields', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'save', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-29 15:50:50,097 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'save', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+)
+[2026-07-29 15:51:04,390 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+)
+[2026-07-29 15:51:11,697 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'AutoFieldMeta', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field', 'file_path': 'django/db/models/options.py'}
+  Value: 1, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-29 15:51:22,904 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field', 'file_path': 'django/db/models/options.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-29 15:51:33,402 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field', 'file_path': 'django/db/models/options.py'}
+  Value: 3, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+)
+[2026-07-29 15:51:44,341 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field', 'file_path': 'django/db/models/options.py'}
+  Value: 4, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+)
+[2026-07-29 15:51:52,057 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 5, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_%s_display', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'options.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-29 15:51:58,241 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Options', 'method_name': 'add_field'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'options.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-29 15:51:58,260 - search_queue - INFO] Duplicate search result: search_action='search_method_in_class' search_action_input={'class_name': 'ModelBase', 'method_name': '_prepare'} search_content='File Path: django/db/models/base.py \nMethod Content: \n    def _prepare(cls):\n        """Create some methods once self._meta has been populated."""\n        opts = cls._meta\n        opts._prepare(cls)\n\n        if opts.order_with_respect_to:\n            cls.get_next_in_order = partialmethod(cls._get_next_or_previous_in_order, is_next=True)\n            cls.get_previous_in_order = partialmethod(cls._get_next_or_previous_in_order, is_next=False)\n\n            # Defer creating accessors on the foreign class until it has been\n            # created and registered. If remote_field is None, we\'re ordering\n            # with respect to a GenericForeignKey and don\'t know what the\n            # foreign class is - we\'ll add those accessors later in\n            # contribute_to_class().\n            if opts.order_with_respect_to.remote_field:\n                wrt = opts.order_with_respect_to\n                remote = wrt.remote_field.model\n                lazy_related_operation(make_foreign_order_accessors, cls, remote)\n\n        # Give the class a docstring -- its definition.\n        if cls.__doc__ is None:\n            cls.__doc__ = "%s(%s)" % (cls.__name__, ", ".join(f.name for f in opts.fields))\n\n        get_absolute_url_override = settings.ABSOLUTE_URL_OVERRIDES.get(opts.label_lower)\n        if get_absolute_url_override:\n            setattr(cls, \'get_absolute_url\', get_absolute_url_override)\n\n        if not opts.managers:\n            if any(f.name == \'objects\' for f in opts.fields):\n                raise ValueError(\n                    "Model %s must specify a custom Manager, because it has a "\n                    "field named \'objects\'." % cls.__name__\n                )\n            manager = Manager()\n            manager.auto_created = True\n            cls.add_to_class(\'objects\', manager)\n\n        # Set the name of _meta.indexes. This can\'t be done in\n        # Options.contribute_to_class() because fields haven\'t been added to\n        # the model at that point.\n        for index in cls._meta.indexes:\n            if not index.name:\n                index.set_name_with_model(cls)\n\n        class_prepared.send(sender=cls)\n'
+[2026-07-29 15:51:58,267 - search_queue - INFO] Duplicate search result: search_action='search_method_in_class' search_action_input={'class_name': 'Options', 'method_name': 'add_field'} search_content='File Path: django/db/models/options.py \nMethod Content: \n    def add_field(self, field, private=False):\n        # Insert the given field in the order in which it was created, using\n        # the "creation_counter" attribute of the field.\n        # Move many-to-many related fields from self.fields into\n        # self.many_to_many.\n        if private:\n            self.private_fields.append(field)\n        elif field.is_relation and field.many_to_many:\n            self.local_many_to_many.insert(bisect(self.local_many_to_many, field), field)\n        else:\n            self.local_fields.insert(bisect(self.local_fields, field), field)\n            self.setup_pk(field)\n\n        # If the field being added is a relation to another known field,\n        # expire the cache on this field and the forward cache on the field\n        # being referenced, because there will be new relationships in the\n        # cache. Otherwise, expire the cache of references *to* this field.\n        # The mechanism for getting at the related model is slightly odd -\n        # ideally, we\'d just ask for field.related_model. However, related_model\n        # is a cached property, and all the models haven\'t been loaded yet, so\n        # we need to make sure we don\'t cache a string reference.\n        if field.is_relation and hasattr(field.remote_field, \'model\') and field.remote_field.model:\n            try:\n                field.remote_field.model._meta._expire_cache(forward=False)\n            except AttributeError:\n                pass\n            self._expire_cache()\n        else:\n            self._expire_cache(reverse=False)\n'

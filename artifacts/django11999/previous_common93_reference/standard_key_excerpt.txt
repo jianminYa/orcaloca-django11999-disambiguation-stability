@@ -1,0 +1,29 @@
+ase.py'}), SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'})]
+[2026-07-23 03:32:51,406 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase'}: 1
+  Search Action: search_class
+Search Action Input: {'class_name': 'Field'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+)
+[2026-07-23 03:32:54,009 - action_history - INFO] Disambiguation: [SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/forms/fields.py'})]
+[2026-07-23 03:33:01,152 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase'}: 1
+  Search Action: search_class
+Search Action Input: {'class_name': 'Field'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_t

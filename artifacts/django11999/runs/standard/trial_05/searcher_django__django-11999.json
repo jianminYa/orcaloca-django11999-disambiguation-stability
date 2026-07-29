@@ -1,0 +1,15 @@
+{
+    "conclusion": "<Observation>\nThe relevant code path is now clearer. `Model._get_FIELD_display()` contains the actual lookup logic for choice fields, while `ModelBase.__new__()` controls class construction and attribute installation. Since the bug is that a user-defined `get_FOO_display()` override is ignored in Django 2.2+, the likely regression is in the model preparation path where Django may be binding or preserving a generated `get_<field>_display` method in a way that overrides the user method or bypasses normal attribute resolution.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "Model",
+            "method_name": "_get_FIELD_display"
+        }
+    ]
+}

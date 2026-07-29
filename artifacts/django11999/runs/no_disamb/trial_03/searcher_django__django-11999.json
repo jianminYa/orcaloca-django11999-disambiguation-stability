@@ -1,0 +1,15 @@
+{
+    "conclusion": "<Observation>\nThe regression is localized to the model field setup path. `Field.contribute_to_class()` unconditionally assigns `get_<field>_display` when `choices` is present, so a user-defined `get_foo_bar_display()` can be overwritten during model class construction. `Model._get_FIELD_display()` is only the helper used by that generated partialmethod, so the likely bug is in attachment behavior rather than display computation.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "Model",
+            "method_name": "_get_FIELD_display"
+        }
+    ]
+}

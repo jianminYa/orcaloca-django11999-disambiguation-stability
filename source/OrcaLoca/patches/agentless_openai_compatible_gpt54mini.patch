@@ -1,0 +1,210 @@
+diff --git a/agentless/repair/repair.py b/agentless/repair/repair.py
+index 6790dea..6a0ee9f 100644
+--- a/agentless/repair/repair.py
++++ b/agentless/repair/repair.py
+@@ -29,6 +29,42 @@ from agentless.util.preprocess_data import (
+ )
+ from agentless.util.utils import cleanup_logger, load_json, load_jsonl, setup_logger
+ 
++def write_empty_repair_output(args, instance_id, write_lock=None):
++    if write_lock is not None:
++        write_lock.acquire()
++    try:
++        with open(args.output_file, "a") as f:
++            f.write(
++                json.dumps(
++                    {
++                        "instance_id": instance_id,
++                        "raw_output": [""],
++                        "try_count": [0],
++                        "all_generations": [[]],
++                        "traj": [],
++                        "prev_content": [[]],
++                        "file_names": [[]],
++                    }
++                )
++                + "\n"
++            )
++    finally:
++        if write_lock is not None:
++            write_lock.release()
++
++
++def safe_process_loc(loc, args, swe_bench_data, prev_o, write_lock=None):
++    instance_id = loc["instance_id"]
++    try:
++        process_loc(loc, args, swe_bench_data, prev_o, write_lock)
++    except Exception:
++        log_file = os.path.join(args.output_folder, "repair_logs", f"{instance_id}.log")
++        logger = setup_logger(log_file)
++        logger.exception("Repair failed for instance; writing empty output.")
++        cleanup_logger(logger)
++        write_empty_repair_output(args, instance_id, write_lock)
++
++
+ repair_relevant_file_instruction = """
+ Below are some code segments, each from a relevant file. One or more of these files may contain bugs.
+ """
+@@ -540,6 +576,33 @@ def process_loc(loc, args, swe_bench_data, prev_o, write_lock=None):
+             sample_trajs = []
+ 
+     sample_responses.extend(sample_trajs)
++    if len(sample_responses) < args.max_samples and not args.mock:
++        logger.warning(
++            "Expected %s repair samples but received %s; requesting missing "
++            "samples one at a time for OpenAI-compatible backend compatibility.",
++            args.max_samples,
++            len(sample_responses),
++        )
++        single_sample_model = make_model(
++            model=args.model,
++            logger=logger,
++            backend=args.backend,
++            max_tokens=1024,
++            temperature=0.8,
++            batch_size=1,
++        )
++        while len(sample_responses) < args.max_samples:
++            if args.str_replace_format:
++                extra_trajs = single_sample_model.codegen_w_tool(
++                    message, num_samples=1, prompt_cache=True
++                )
++            else:
++                extra_trajs = single_sample_model.codegen(
++                    message, num_samples=1, prompt_cache=True
++                )
++            if not extra_trajs:
++                raise RuntimeError("OpenAI-compatible backend returned no repair sample")
++            sample_responses.extend(extra_trajs[:1])
+ 
+     count = 0
+     while count < args.max_samples:
+@@ -609,7 +672,7 @@ def repair(args):
+ 
+     if args.num_threads == 1:
+         for loc in tqdm(locs, total=len(locs), colour="MAGENTA"):
+-            process_loc(loc, args, swe_bench_data, prev_o)
++            safe_process_loc(loc, args, swe_bench_data, prev_o)
+     else:
+         with Manager() as manager:
+             write_lock = manager.Lock()
+@@ -618,7 +681,7 @@ def repair(args):
+             ) as executor:
+                 futures = {
+                     executor.submit(
+-                        process_loc, loc, args, swe_bench_data, prev_o, write_lock
++                        safe_process_loc, loc, args, swe_bench_data, prev_o, write_lock
+                     ): loc
+                     for loc in locs
+                 }
+@@ -812,12 +875,6 @@ def main():
+         "--model",
+         type=str,
+         default="claude-3-5-sonnet-20241022",
+-        choices=[
+-            "gpt-4o-2024-05-13",
+-            "deepseek-coder",
+-            "gpt-4o-mini-2024-07-18",
+-            "claude-3-5-sonnet-20241022",
+-        ],
+     )
+     parser.add_argument(
+         "--backend",
+diff --git a/agentless/util/api_requests.py b/agentless/util/api_requests.py
+index a48f2b7..631eea1 100644
+--- a/agentless/util/api_requests.py
++++ b/agentless/util/api_requests.py
+@@ -1,3 +1,5 @@
++import os
++import random
+ import time
+ from typing import Dict, Union
+ 
+@@ -6,6 +8,28 @@ import openai
+ import tiktoken
+ 
+ 
++OPENAI_BASE_URL_KEYS = (
++    "OPENAI_BASE_URL",
++    "BASE_URL",
++    "API_BASE_URL",
++    "OPENAI_API_BASE",
++)
++
++
++def get_openai_base_url():
++    for key in OPENAI_BASE_URL_KEYS:
++        value = os.environ.get(key)
++        if value:
++            return value
++    return None
++
++
++def sleep_before_retry(retries, logger, reason):
++    delay = min(60, (2 ** min(retries, 5)) + random.uniform(0, 1))
++    logger.info(f"{reason}. Waiting {delay:.1f}s before retry {retries + 1}.")
++    time.sleep(delay)
++
++
+ def num_tokens_from_messages(message, model="gpt-3.5-turbo-0301"):
+     """Returns the number of tokens used by a list of messages."""
+     try:
+@@ -59,7 +83,11 @@ def request_chatgpt_engine(config, logger, base_url=None, max_retries=40, timeou
+     ret = None
+     retries = 0
+ 
+-    client = openai.OpenAI(base_url=base_url)
++    client = openai.OpenAI(
++        base_url=base_url or get_openai_base_url(),
++        timeout=timeout,
++        max_retries=0,
++    )
+ 
+     while ret is None and retries < max_retries:
+         try:
+@@ -74,27 +102,35 @@ def request_chatgpt_engine(config, logger, base_url=None, max_retries=40, timeou
+                 print(e)
+                 logger.info(e)
+                 raise Exception("Invalid API Request")
++            elif isinstance(e, openai.APIStatusError):
++                status_code = getattr(e, "status_code", None)
++                if status_code and (status_code >= 500 or status_code in {408, 409, 429}):
++                    logger.info(e)
++                    sleep_before_retry(retries, logger, f"Retryable API status {status_code}")
++                else:
++                    logger.info("Non-retryable API status")
++                    print(e)
++                    logger.info(e)
++                    raise
+             elif isinstance(e, openai.RateLimitError):
+                 print("Rate limit exceeded. Waiting...")
+                 logger.info("Rate limit exceeded. Waiting...")
+-                print(e)
+                 logger.info(e)
+-                time.sleep(5)
+-            elif isinstance(e, openai.APIConnectionError):
+-                print("API connection error. Waiting...")
+-                logger.info("API connection error. Waiting...")
+-                print(e)
++                sleep_before_retry(retries, logger, "Rate limit exceeded")
++            elif isinstance(e, (openai.APIConnectionError, openai.APITimeoutError)):
++                logger.info("API connection or timeout error. Waiting...")
+                 logger.info(e)
+-                time.sleep(5)
++                sleep_before_retry(retries, logger, "API connection or timeout error")
+             else:
+-                print("Unknown error. Waiting...")
+                 logger.info("Unknown error. Waiting...")
+-                print(e)
+                 logger.info(e)
+-                time.sleep(1)
++                sleep_before_retry(retries, logger, "Unknown OpenAI API error")
+ 
+         retries += 1
+ 
++    if ret is None:
++        raise RuntimeError(f"OpenAI-compatible request failed after {max_retries} retries")
++
+     logger.info(f"API response {ret}")
+     return ret
+ 

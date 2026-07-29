@@ -1,0 +1,15 @@
+{
+    "conclusion": "<Observation>\nThe regression appears to come from model class construction rather than the display fallback itself. `Field.contribute_to_class()` unconditionally assigns `get_%s_display` onto the model when `choices` is present, so a user-defined `get_foo_bar_display()` can be overwritten during class setup in Django 2.2+. `Model._get_FIELD_display()` only returns the choice label, and `ModelBase.__new__()` / `ModelBase.add_to_class()` are the surrounding attachment points that control when this overwrite happens.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "add_to_class"
+        }
+    ]
+}

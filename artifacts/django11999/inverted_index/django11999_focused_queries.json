@@ -1,0 +1,211 @@
+{
+  "Field": {
+    "present_after_singleton_pruning": true,
+    "candidate_count": 3,
+    "candidates": [
+      {
+        "type": "class",
+        "file_path": "django/contrib/gis/gdal/field.py",
+        "class_name": null
+      },
+      {
+        "type": "class",
+        "file_path": "django/db/models/fields/__init__.py",
+        "class_name": null
+      },
+      {
+        "type": "class",
+        "file_path": "django/forms/fields.py",
+        "class_name": null
+      }
+    ]
+  },
+  "ModelBase": {
+    "present_after_singleton_pruning": false,
+    "candidate_count": 0,
+    "candidates": []
+  },
+  "contribute_to_class": {
+    "present_after_singleton_pruning": true,
+    "candidate_count": 14,
+    "candidates": [
+      {
+        "type": "method",
+        "file_path": "django/contrib/contenttypes/fields.py",
+        "class_name": "GenericForeignKey"
+      },
+      {
+        "type": "method",
+        "file_path": "django/contrib/contenttypes/fields.py",
+        "class_name": "GenericRelation"
+      },
+      {
+        "type": "method",
+        "file_path": "django/contrib/gis/db/models/fields.py",
+        "class_name": "GeometryField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/contrib/gis/db/models/fields.py",
+        "class_name": "RasterField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/options.py",
+        "class_name": "Options"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/manager.py",
+        "class_name": "BaseManager"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/related.py",
+        "class_name": "RelatedField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/related.py",
+        "class_name": "ForeignObject"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/related.py",
+        "class_name": "ManyToManyField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/__init__.py",
+        "class_name": "Field"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/__init__.py",
+        "class_name": "DateField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/__init__.py",
+        "class_name": "AutoFieldMixin"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/files.py",
+        "class_name": "FileField"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/fields/files.py",
+        "class_name": "ImageField"
+      }
+    ]
+  },
+  "add_to_class": {
+    "present_after_singleton_pruning": false,
+    "candidate_count": 0,
+    "candidates": []
+  },
+  "_prepare": {
+    "present_after_singleton_pruning": true,
+    "candidate_count": 3,
+    "candidates": [
+      {
+        "type": "method",
+        "file_path": "django/contrib/messages/storage/base.py",
+        "class_name": "Message"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/options.py",
+        "class_name": "Options"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/base.py",
+        "class_name": "ModelBase"
+      }
+    ]
+  },
+  "__new__": {
+    "present_after_singleton_pruning": true,
+    "candidate_count": 13,
+    "candidates": [
+      {
+        "type": "method",
+        "file_path": "django/test/selenium.py",
+        "class_name": "SeleniumTestCaseBase"
+      },
+      {
+        "type": "method",
+        "file_path": "django/utils/datastructures.py",
+        "class_name": "ImmutableList"
+      },
+      {
+        "type": "method",
+        "file_path": "django/utils/deprecation.py",
+        "class_name": "RenameMethodsBase"
+      },
+      {
+        "type": "function",
+        "file_path": "django/utils/deconstruct.py",
+        "class_name": null
+      },
+      {
+        "type": "method",
+        "file_path": "django/conf/__init__.py",
+        "class_name": "SettingsReference"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/base.py",
+        "class_name": "ModelBase"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/manager.py",
+        "class_name": "BaseManager"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/models/enums.py",
+        "class_name": "ChoicesMeta"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/migrations/migration.py",
+        "class_name": "SwappableTuple"
+      },
+      {
+        "type": "method",
+        "file_path": "django/db/migrations/operations/base.py",
+        "class_name": "Operation"
+      },
+      {
+        "type": "method",
+        "file_path": "django/forms/models.py",
+        "class_name": "ModelFormMetaclass"
+      },
+      {
+        "type": "method",
+        "file_path": "django/forms/widgets.py",
+        "class_name": "MediaDefiningClass"
+      },
+      {
+        "type": "method",
+        "file_path": "django/forms/forms.py",
+        "class_name": "DeclarativeFieldsMetaclass"
+      }
+    ]
+  },
+  "get_FOO_display": {
+    "present_after_singleton_pruning": false,
+    "candidate_count": 0,
+    "candidates": []
+  },
+  "_get_FIELD_display": {
+    "present_after_singleton_pruning": false,
+    "candidate_count": 0,
+    "candidates": []
+  }
+}

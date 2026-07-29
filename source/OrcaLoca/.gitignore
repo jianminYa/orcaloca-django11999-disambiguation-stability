@@ -1,0 +1,35 @@
+*.txt
+*.png
+*egg-info/
+dist/
+log*/
+output*/
+build/
+__pycache__/
+.mypy_cache/
+key.cfg
+artifact/assets
+artifact/artifact
+# unignore a file
+!requirements.txt
+
+# Reproduction-local secrets and generated outputs
+key.cfg
+.env
+*.log
+*.pid
+*.state.json
+output/
+log/
+log_*/
+logs/
+results/
+playground/
+run_work/
+agentless_outputs/
+hf/
+hf_datasets/
+orcar_cache/
+.cache/
+__pycache__/
+*.pyc

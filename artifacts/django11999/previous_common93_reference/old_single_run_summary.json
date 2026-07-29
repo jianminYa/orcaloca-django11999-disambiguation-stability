@@ -1,0 +1,89 @@
+{
+  "source_artifact": "prior local Common93 disambiguation-ablation artifact export",
+  "instance_id": "django__django-11999",
+  "gold_file": "django/db/models/fields/__init__.py",
+  "gold_function": "django/db/models/fields/__init__.py:Field.contribute_to_class",
+  "groups": {
+    "standard": {
+      "bug_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "_prepare"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": ""
+        }
+      ],
+      "file_match": true,
+      "function_match": true,
+      "disambiguation_action_lines": [
+        "[2026-07-23 03:32:54,009 - action_history - INFO] Disambiguation: [SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/forms/fields.py'})]"
+      ],
+      "contribute_to_class_action_lines": [
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 2",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "[2026-07-23 03:34:53,537 - action_history - INFO] Top class methods: [SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}), SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'Field', 'method_name': '__reduce__', 'file_path': 'django/db/models/fields/__init__.py'}), SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'})]",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3",
+        "Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 3"
+      ]
+    },
+    "no_disamb": {
+      "bug_locations": [
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "_prepare"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "add_to_class"
+        }
+      ],
+      "file_match": false,
+      "function_match": false,
+      "disambiguation_action_lines": [],
+      "contribute_to_class_action_lines": [
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 1",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2",
+        "Search Action Input: {'query_name': 'contribute_to_class'}: 2"
+      ]
+    }
+  }
+}
