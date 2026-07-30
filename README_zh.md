@@ -99,7 +99,7 @@ python scripts/summarize_django11999_trials.py --root .
 4. standard 组的 `trial_05` 没有定位成功，是因为模型搜索路径停留在 `django/db/models/base.py` 附近，没有搜索 `Field` 或 `contribute_to_class`。如果没有产生包含正确实体名的歧义查询，disambiguation 模块就没有机会发挥作用。
 5. no_disamb 组中有两次日志出现了 `<Disambiguation>` 文本，但由于配置关闭了 disambiguation decomposition，没有实际生成消歧搜索动作，最终 match 主要来自 LLM 直接路径判断和其他 decomposition 流程。
 
-因此，适合对师兄汇报的表述是：
+因此，本仓库对该问题的结论是：
 
 > 针对 `django__django-11999` 的重复实验显示，单个样例上 standard 与 no_disamb 的差异不稳定。消歧机制确实能把歧义实体名展开为具体搜索动作，但该 issue 中模型本身经常能直接找到正确文件和函数，所以不能把之前单次 no_disamb miss 解释为稳定消歧收益。
 
@@ -226,16 +226,22 @@ python scripts/export_runtime_index.py --root .
 - `key.cfg`、API key、真实 API endpoint 不提交。
 - Docker 镜像、conda 环境、Hugging Face cache 不提交。
 
-## 给师兄的简短回答
+## 关键问题摘要
 
-如果被问“实验设置是什么，用的 LLM 是什么，中间结果有没有保留”，可以这样回答：
+### 实验设置、LLM 与中间结果
 
-> 这次针对 `django__django-11999` 单独做了 5 次 standard 和 5 次关闭 disambiguation 的重复实验，其他参数保持一致，只把 `disambiguation=True/False` 作为变量。定位阶段使用 `gpt-5.4-mini`，通过 OpenAI-compatible API 调用。中间结果已经保留，包括每次 OrcaLoca 的最终 localization JSON、主日志、action history、消歧事件、运行时倒排索引导出和汇总表，都放在 GitHub 仓库的 `artifacts/django11999/` 下。
+本实验针对 `django__django-11999` 单独做了 5 次 standard 和 5 次关闭 disambiguation 的重复实验。两组实验的其他参数保持一致，只把 `disambiguation=True/False` 作为变量。定位阶段使用 `gpt-5.4-mini`，通过 OpenAI-compatible API 调用。
 
-如果被问“倒排索引在哪里”，可以回答：
+中间结果已经保留，包括每次 OrcaLoca 的最终 localization JSON、主日志、action history、消歧事件、运行时倒排索引导出和汇总表，均位于 `artifacts/django11999/` 下。
 
-> OrcaLoca 的倒排索引不是离线文件，而是在每个 issue 运行时根据 checkout 出来的目标仓库源码动态构建。我们这次把 `django__django-11999` 对应 Django 仓库构建出的 duplicate-key index 导出了，放在 `artifacts/django11999/inverted_index/`，里面可以看到 `Field` 有 3 个候选 class，`contribute_to_class` 有 14 个候选 method。
+### 倒排索引
 
-如果被问“这个例子是否证明消歧稳定有效”，可以回答：
+OrcaLoca 的倒排索引不是离线文件，而是在每个 issue 运行时根据 checkout 出来的目标仓库源码动态构建。本实验导出了 `django__django-11999` 对应 Django 仓库构建出的 duplicate-key index，位置是 `artifacts/django11999/inverted_index/`。
 
-> 这个单例重复实验不能证明稳定提升。standard 是 4/5 match，no_disamb 是 5/5 match。但日志说明消歧机制确实能在模型搜索到歧义实体时，把模糊名字展开成具体文件路径上的搜索动作。它更适合作为机制证据，而不是这个单个 issue 上的稳定收益证据。
+导出结果显示，`Field` 有 3 个候选 class，`contribute_to_class` 有 14 个候选 method。
+
+### 消歧稳定性结论
+
+这个单例重复实验不能证明 disambiguation decomposition 在 `django__django-11999` 上稳定提升。standard 是 4/5 match，no_disamb 是 5/5 match。
+
+不过日志说明消歧机制确实能在模型搜索到歧义实体时，把模糊名字展开成具体文件路径上的搜索动作。因此，本实验更适合作为消歧机制的案例分析，而不是该单个 issue 上的稳定收益证明。

@@ -151,6 +151,40 @@ Main files:
   OrcaLoca builds the inverted index.
 - `docs/artifacts_guide_zh.md`: how to inspect the artifacts in this repository.
 
+## Key Questions
+
+### Experiment Setting, LLM and Artifacts
+
+This experiment runs 5 standard trials and 5 no-disambiguation trials for
+`django__django-11999`. All settings are kept constant except
+`disambiguation=True/False`. The localization model is `gpt-5.4-mini` through an
+OpenAI-compatible API.
+
+Intermediate artifacts are preserved under `artifacts/django11999/`, including
+the final OrcaLoca localization JSON, main logs, action history logs,
+disambiguation events, exported runtime inverted index and summary tables.
+
+### Inverted Index
+
+OrcaLoca's inverted index is not an offline file. It is built at runtime from
+the checked-out target repository for each issue. This repository exports the
+duplicate-key index built for the Django checkout used by `django__django-11999`
+under `artifacts/django11999/inverted_index/`.
+
+The exported index shows that `Field` has 3 candidate classes and
+`contribute_to_class` has 14 candidate methods.
+
+### Disambiguation Stability
+
+This single-issue repeated experiment does not prove a stable disambiguation
+benefit for `django__django-11999`: the standard setting matched in 4/5 runs,
+while the no-disambiguation setting matched in 5/5 runs.
+
+The logs still show the mechanism clearly. When the model searches an ambiguous
+entity, OrcaLoca can expand the ambiguous name into concrete file-specific
+search actions. This makes the issue useful as a mechanism case study, but not
+as a stable single-issue improvement claim.
+
 ## Source Snapshot
 
 `source/OrcaLoca/` is the patched OrcaLoca source snapshot used in this study.
