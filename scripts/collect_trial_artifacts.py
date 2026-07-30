@@ -18,6 +18,9 @@ FILES_TO_COPY = [
     "Orcar.trace_analysis_agent.log",
     f"orcar_{INSTANCE_ID}.log",
 ]
+EXTRA_TRIAL_FILES = [
+    "hidden_disambiguation_candidates.jsonl",
+]
 
 
 def copy_if_exists(src: Path, dst: Path) -> None:
@@ -49,10 +52,9 @@ def main() -> None:
     runs_root = root / "work" / "django11999_stability" / "runs"
     artifact_root = root / "artifacts" / "django11999" / "runs"
 
-    for group in ["standard", "no_disamb"]:
+    groups = [path.name for path in sorted(runs_root.iterdir()) if path.is_dir()] if runs_root.exists() else []
+    for group in groups:
         group_dir = runs_root / group
-        if not group_dir.exists():
-            continue
         for trial_dir in sorted(group_dir.glob("trial_*")):
             if not trial_dir.is_dir():
                 continue
@@ -72,6 +74,8 @@ def main() -> None:
                 trial_dir / f"run_{group}_{trial_dir.name}.log",
                 out_dir / f"run_{group}_{trial_dir.name}.log",
             )
+            for file_name in EXTRA_TRIAL_FILES:
+                copy_if_exists(trial_dir / file_name, out_dir / file_name)
     print(f"Collected artifacts under {artifact_root}")
 
 

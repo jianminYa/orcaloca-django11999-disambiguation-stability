@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe bug is most likely in Django's model class construction flow in django/db/models/base.py. ModelBase.__new__ handles class creation and attaches declared attributes before calling _prepare(), and ModelBase.add_to_class() uses setattr() for non-contributable values. Since get_FOO_display() is a normal method name that can be explicitly defined on the model, the regression likely happens when Django later injects or resolves a generated display helper with the same name, causing the user-defined override to be ignored. No further disambiguation is needed from the current context.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "_prepare"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "add_to_class"
+        }
+    ]
+}

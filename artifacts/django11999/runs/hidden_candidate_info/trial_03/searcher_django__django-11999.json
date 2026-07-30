@@ -1,0 +1,15 @@
+{
+    "conclusion": "<Observation>\nThe bug is localized. `Field.contribute_to_class()` in `django/db/models/fields/__init__.py` unconditionally sets `get_<field>_display` whenever `choices` is present, so a model-defined override is overwritten. The generated method delegates to `Model._get_FIELD_display()` in `django/db/models/base.py`, which confirms the display logic itself is separate from the override installation. The remaining related methods (`refresh_from_db`, `serializable_value`, etc.) do not appear relevant to this regression.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "Model",
+            "method_name": "_get_FIELD_display"
+        }
+    ]
+}

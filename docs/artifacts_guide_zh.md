@@ -6,6 +6,7 @@
 
 - standard：5/5 完成，4/5 file match，4/5 function match。
 - no_disamb：5/5 完成，5/5 file match，5/5 function match。
+- hidden_candidate_info：5/5 完成，3/5 file match，3/5 function match。
 - 结论：`django__django-11999` 上旧单次 `standard match / no_disamb miss` 不是稳定复现结果。
 
 ## 目录结构
@@ -15,7 +16,8 @@
 ├── README.md
 ├── configs/
 │   ├── search_standard.cfg
-│   └── search_no_disamb.cfg
+│   ├── search_no_disamb.cfg
+│   └── search_hidden_candidate_info.cfg
 ├── scripts/
 │   ├── run_django11999_stability_experiment.sh
 │   ├── summarize_django11999_trials.py
@@ -40,12 +42,13 @@
 
 每行是一组一次重复实验：
 
-- `group`: `standard` 或 `no_disamb`
+- `group`: `standard`、`no_disamb` 或 `hidden_candidate_info`
 - `trial`: 重复编号
 - `completed`: 是否生成最终 `searcher_*.json`
 - `file_match`: 输出文件是否命中 gold file
 - `function_match`: 输出函数是否命中 gold function
 - `disambiguation_message_count`: 本轮日志中是否出现 `<Disambiguation>`
+- `ambiguous_search_message_count`: hidden 组中是否出现 `<AmbiguousSearch>`
 - `selected_disambiguation_action_count`: standard 是否把候选转换成队列动作
 - `model_files`, `model_functions`: 最终模型输出的位置集合
 
@@ -72,6 +75,12 @@ Disambiguation: [SearchActionStep(...)]
 ```
 
 如果只有 `<Disambiguation>` 文本但没有这行，说明工具发现了歧义候选，但没有被 decomposition 机制自动加入搜索队列。
+
+`artifacts/django11999/runs/hidden_candidate_info/<trial>/hidden_disambiguation_candidates.jsonl`
+
+只在 hidden-candidate 消融里可能出现。它记录“原本会展示给 LLM、但本实验刻意隐藏”的候选列表。注意这个文件是实验审计 artifact，不是 LLM observation。
+
+如果某个 hidden trial 没有这个文件，说明该轮没有触发任何需要隐藏的歧义候选。
 
 `artifacts/django11999/runs/<group>/<trial>/logs/orcar_total.log`
 
@@ -104,3 +113,21 @@ Disambiguation: [SearchActionStep(...)]
 `artifacts/django11999/previous_common93_reference/`
 
 之前 Common93 单次消融中 `django__django-11999` 出现 `standard match / no_disamb miss` 的紧凑摘录。它用于解释为什么最初怀疑 disambiguation 对该 issue 有帮助。
+
+## hidden_candidate_info 怎么看
+
+这组实验回答“如果不给候选路径，只告诉 LLM 存在歧义，会怎样”。
+
+核心文件：
+
+- `configs/search_hidden_candidate_info.cfg`
+- `artifacts/django11999/runs/hidden_candidate_info/trial_*/logs/orcar_total.log`
+- `artifacts/django11999/runs/hidden_candidate_info/trial_*/hidden_disambiguation_candidates.jsonl`
+
+本轮 5 次里只有 `trial_01` 出现隐藏候选文件，内容是 `Options` 类的两个候选路径。`trial_04` 和 `trial_05` 没有触发关键歧义提示，最终 miss 的直接原因是搜索路径停留在 `django/db/models/base.py`，没有到达 `django/db/models/fields/__init__.py:Field.contribute_to_class`。
+
+因此阅读这组 artifact 时，不应只看 3/5 的分数，而要同时看：
+
+- 是否真的出现 `<AmbiguousSearch>`。
+- 隐藏的是哪个 query。
+- 最终 `model_functions` 是否包含 gold function。

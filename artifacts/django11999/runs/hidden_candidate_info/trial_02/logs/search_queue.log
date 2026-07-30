@@ -1,0 +1,52 @@
+[2026-07-30 08:19:10,214 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-30 08:19:39,264 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:19:53,771 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:20:46,386 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+)
+[2026-07-30 08:21:09,604 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+)
+[2026-07-30 08:21:29,202 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+)

@@ -1,4 +1,5 @@
 import ast
+import json
 import os
 import re
 from typing import Dict, List, Tuple
@@ -7,6 +8,53 @@ import pandas as pd
 
 from .build_graph import Loc, LocInfo, RepoGraph
 from .inverted_index import IndexValue, InvertedIndex
+
+
+def _env_truthy(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _candidate_to_dict(candidate: IndexValue) -> dict:
+    return {
+        "type": candidate.type,
+        "file_path": candidate.file_path,
+        "class_name": candidate.class_name,
+    }
+
+
+def _log_hidden_disambiguation_candidates(
+    query_kind: str, query: str, candidates: List[IndexValue]
+) -> None:
+    log_path = os.environ.get("ORCALOCA_HIDDEN_DISAMBIGUATION_LOG", "").strip()
+    if not log_path:
+        return
+    log_dir = os.path.dirname(log_path)
+    if log_dir:
+        os.makedirs(log_dir, exist_ok=True)
+    payload = {
+        "query_kind": query_kind,
+        "query": query,
+        "candidate_count": len(candidates),
+        "candidates": [_candidate_to_dict(candidate) for candidate in candidates],
+    }
+    with open(log_path, "a") as handle:
+        handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+
+
+def _format_disambiguation_response(
+    query_kind: str, query: str, detailed_response: str, candidates: List[IndexValue]
+) -> str:
+    if not _env_truthy("ORCALOCA_HIDE_DISAMBIGUATION_CANDIDATES"):
+        return f"<Disambiguation>\n{detailed_response}</Disambiguation>"
+    _log_hidden_disambiguation_candidates(query_kind, query, candidates)
+    return (
+        "<AmbiguousSearch>\n"
+        f"The {query_kind} query `{query}` matches multiple repository entities.\n"
+        "Candidate locations are hidden in this ablation and were not shown to you.\n"
+        "Please refine the query using search_file_tree, search_file_contents, "
+        "or retry with an explicit file_path if you can infer a likely path.\n"
+        "</AmbiguousSearch>"
+    )
 
 
 def check_class_method_unique(
@@ -772,8 +820,9 @@ class SearchManager:
                     res += f"Possible Location {locs.index(loc)+1}:\n"
                     res += f"File Path: {loc.file_path}\n"
                     res += "\n"
-                # add <Disambiguation>res</Disambiguation>
-                ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+                ret_string = _format_disambiguation_response(
+                    "file", file_name, res, locs
+                )
                 new_row = {
                     "search_action": "search_file_contents",
                     "search_input": file_name,
@@ -876,8 +925,9 @@ class SearchManager:
                 if loc.class_name:
                     res += f"Containing Class: {loc.class_name}\n"
                 res += "\n"
-            # add <Disambiguation>res</Disambiguation>
-            ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+            ret_string = _format_disambiguation_response(
+                "fuzzy", query, res, locs
+            )
             new_row = {
                 "search_action": "fuzzy_search",
                 "search_input": query,
@@ -1060,8 +1110,9 @@ class SearchManager:
                     res += f"Possible Location {locs.index(loc)+1}:\n"
                     res += f"File Path: {loc.file_path}\n"
                     res += "\n"
-                # add <Disambiguation>res</Disambiguation>
-                ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+                ret_string = _format_disambiguation_response(
+                    "class", class_name, res, locs
+                )
                 new_row = {
                     "search_action": "search_class",
                     "search_input": class_name,
@@ -1172,8 +1223,9 @@ class SearchManager:
                     res += f"File Path: {loc.file_path}\n"
                     res += f"Containing Class: {loc.class_name}\n"
                     new_index += 1
-                # add <Disambiguation>res</Disambiguation>
-                ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+                ret_string = _format_disambiguation_response(
+                    "method", search_input, res, locs
+                )
                 new_row = {
                     "search_action": "search_method_in_class",
                     "search_input": search_input,
@@ -1280,8 +1332,9 @@ class SearchManager:
                     if loc.class_name:
                         res += f"Containing Class: {loc.class_name}\n"
                     res += "\n"
-                # add <Disambiguation>res</Disambiguation>
-                ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+                ret_string = _format_disambiguation_response(
+                    "callable", search_input, res, locs
+                )
                 new_row = {
                     "search_action": "search_callable",
                     "search_input": search_input,
@@ -1353,8 +1406,9 @@ class SearchManager:
                     if loc.class_name:
                         res += f"Containing Class: {loc.class_name}\n"
                     res += "\n"
-                # add <Disambiguation>res</Disambiguation>
-                ret_string = f"<Disambiguation>\n{res}</Disambiguation>"
+                ret_string = _format_disambiguation_response(
+                    "callable", query_name, res, locs
+                )
                 new_row = {
                     "search_action": "search_callable",
                     "search_input": query_name,

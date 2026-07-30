@@ -20,6 +20,7 @@ django/db/models/fields/__init__.py:Field.contribute_to_class
 
 - standard：`class=True`, `file=True`, `disambiguation=True`
 - no_disamb：`class=True`, `file=True`, `disambiguation=False`
+- hidden_candidate_info：`class=True`, `file=True`, `disambiguation=False`，并隐藏歧义候选路径，只返回 `<AmbiguousSearch>` 简短提示
 
 其它保持一致：
 
@@ -148,19 +149,20 @@ SearchAgent 不会在第一次看到正确函数时立即停止。它会继续�
 
 ## 最终重复实验结果
 
-本次对 `django__django-11999` 做了 5 次 standard 和 5 次 no-disambiguation 重复实验。
+本次对 `django__django-11999` 做了 5 次 standard、5 次 no-disambiguation 和 5 次 hidden-candidate 重复实验。
 
-| 组别 | 完成 | file match | function match | `<Disambiguation>` 文本次数 | 自动加入队列的消歧动作 | 日志 token 总量 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| standard | 5/5 | 4/5 | 4/5 | 1 | 1 | 812,783 |
-| no_disamb | 5/5 | 5/5 | 5/5 | 2 | 0 | 536,736 |
+| 组别 | 完成 | file match | function match | `<Disambiguation>` 文本次数 | `<AmbiguousSearch>` 隐藏提示 | 自动加入队列的消歧动作 | 日志 token 总量 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| standard | 5/5 | 4/5 | 4/5 | 1 | 0 | 1 | 812,783 |
+| no_disamb | 5/5 | 5/5 | 5/5 | 2 | 0 | 0 | 536,736 |
+| hidden_candidate_info | 5/5 | 3/5 | 3/5 | 0 | 1 | 0 | 494,538 |
 
 逐轮结果见：
 
 - `artifacts/django11999/trial_summary.csv`
 - `artifacts/django11999/trial_summary.json`
 
-结论是：这个 issue 不能作为“消歧机制稳定提升定位准确率”的强单例证据。旧 Common93 单次结果里确实出现过 `standard match / no_disamb miss`，而且从日志看 disambiguation 当时确实提供了有效帮助；但重复 5 次后，no-disambiguation 反而 5/5 都命中，standard 有 1 次 miss。
+结论是：这个 issue 不能作为“消歧机制稳定提升定位准确率”的强单例证据。旧 Common93 单次结果里确实出现过 `standard match / no_disamb miss`，而且从日志看 disambiguation 当时确实提供了有效帮助；但重复 5 次后，no-disambiguation 反而 5/5 都命中，standard 有 1 次 miss。更强的 hidden-candidate 组为 3/5，但其中只有 1 次真正触发了隐藏歧义提示，所以不能把 3/5 直接解释为“候选路径缺失必然导致性能下降”。
 
 ## 为什么旧单次差异不是稳定结论
 
@@ -234,6 +236,47 @@ disambiguation = False
 - no_disamb：只有候选文本，后续是否搜索具体候选交给 LLM 自己判断。
 
 在本 issue 中，no-disambiguation 的多个 trial 仍能靠 LLM 直接给出正确路径或靠 class decomposition 找到 `Field.contribute_to_class`，因此结果并没有下降。
+
+## hidden_candidate_info：完全不展示候选路径的更强消融
+
+为了回应“如果完全不给 agent 候选路径，只告诉它存在重名实体，它还能不能找到正确位置”的问题，本仓库额外加入了 `hidden_candidate_info` 组。
+
+实现方式：
+
+1. 搜索配置仍关闭 `disambiguation=False`，因此不会把候选自动变成队列动作。
+2. 当 `SearchManager` 原本要返回 `<Disambiguation>` 候选列表时，改为返回：
+
+```text
+<AmbiguousSearch>
+The <query_kind> query `<query>` matches multiple repository entities.
+Candidate locations are hidden in this ablation and were not shown to you.
+Please refine the query using search_file_tree, search_file_contents, or retry with an explicit file_path if you can infer a likely path.
+</AmbiguousSearch>
+```
+
+3. 真正的候选路径不会进入 LLM observation，而是写入：
+
+```text
+artifacts/django11999/runs/hidden_candidate_info/<trial>/hidden_disambiguation_candidates.jsonl
+```
+
+这组的结果是：
+
+| Trial | File Match | Function Match | 是否触发隐藏歧义提示 | 最终定位 |
+| --- | --- | --- | ---: | --- |
+| trial_01 | yes | yes | 1 | 包含 `Field.contribute_to_class` |
+| trial_02 | yes | yes | 0 | 包含 `Field.contribute_to_class` |
+| trial_03 | yes | yes | 0 | 包含 `Field.contribute_to_class` |
+| trial_04 | no | no | 0 | 只停留在 `django/db/models/base.py:ModelBase.*` |
+| trial_05 | no | no | 0 | 只停留在 `django/db/models/base.py:ModelBase.*` |
+
+需要注意：唯一一次 hidden 提示是 `trial_01` 的 `Options` 类歧义：
+
+```json
+{"query_kind": "class", "query": "Options", "candidate_count": 2}
+```
+
+它不是本 issue 的 gold 位置。因此 hidden 组不能证明“隐藏 `Field` / `contribute_to_class` 候选后模型失败”，因为这 5 次里模型并没有对关键实体触发隐藏候选。它能说明的是：如果没有候选路径自动执行保障，agent 更依赖自身 search path；当 search path 没有扩展到 `django/db/models/fields/__init__.py` 时，最终就容易 miss。
 
 ## standard trial_05：为什么 standard 也会 miss
 

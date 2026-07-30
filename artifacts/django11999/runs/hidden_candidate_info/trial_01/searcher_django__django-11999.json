@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe search results strongly indicate the regression is in Django's choice-display helper injection. Field.contribute_to_class() unconditionally assigns get_<field>_display on the model class using setattr(..., partialmethod(cls._get_FIELD_display, field=self)), so a user-defined get_foo_bar_display() can be shadowed in Django 2.2+. ModelBase.__new__() confirms this happens during class construction, and Model._get_FIELD_display() is only the underlying formatter, not the source of override precedence.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "Model",
+            "method_name": "_get_FIELD_display"
+        }
+    ]
+}

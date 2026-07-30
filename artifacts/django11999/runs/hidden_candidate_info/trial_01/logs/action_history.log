@@ -1,0 +1,420 @@
+[2026-07-30 08:13:44,715 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 1
+)
+[2026-07-30 08:13:59,908 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 2
+)
+[2026-07-30 08:14:07,502 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 2
+)
+[2026-07-30 08:14:20,485 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+)
+[2026-07-30 08:14:24,679 - action_history - INFO] Top file functions: [SearchActionStep(search_action='search_callable', search_action_input={'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'})]
+[2026-07-30 08:14:33,116 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 1
+)
+[2026-07-30 08:14:36,334 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 2
+)
+[2026-07-30 08:14:40,086 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+)
+[2026-07-30 08:14:43,273 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 1
+)
+[2026-07-30 08:14:48,069 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+)
+[2026-07-30 08:14:51,534 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+)
+[2026-07-30 08:14:55,380 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+)
+[2026-07-30 08:15:15,150 - action_history - INFO] Top file functions: [SearchActionStep(search_action='search_callable', search_action_input={'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'})]
+[2026-07-30 08:15:18,522 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 1
+)
+[2026-07-30 08:15:22,239 - action_history - INFO] Top class methods: [SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'})]
+[2026-07-30 08:15:27,156 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+)
+[2026-07-30 08:15:32,888 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+)
+[2026-07-30 08:16:08,930 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 1
+)
+[2026-07-30 08:16:13,592 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+)
+[2026-07-30 08:16:17,621 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__getattr__', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__init__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+  Search Action: search_callable
+Search Action Input: {'query_name': '_has_contribute_to_class', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}: 3
+  Search Action: search_class
+Search Action Input: {'class_name': 'Options'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'DateTimeCheckMixin', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'DateTimeCheckMixin', 'method_name': '_check_mutually_exclusive_options', 'file_path': 'django/db/models/fields/__init__.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+)

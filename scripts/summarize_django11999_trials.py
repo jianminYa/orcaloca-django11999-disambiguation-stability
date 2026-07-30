@@ -100,6 +100,14 @@ def extract_disambiguation_blocks(text: str) -> list[str]:
     return [match.strip() for match in pattern.findall(text)]
 
 
+def extract_ambiguous_search_blocks(text: str) -> list[str]:
+    pattern = re.compile(
+        r"<AmbiguousSearch>(?:\\n|\n)(.*?)(?:\\n|\n)</AmbiguousSearch>",
+        re.S,
+    )
+    return [match.strip() for match in pattern.findall(text)]
+
+
 def summarize_trial(root: Path, group: str, trial: str) -> dict:
     trial_dir = root / "work" / "django11999_stability" / "runs" / group / trial
     orca_dir = trial_dir / "OrcaLoca"
@@ -116,6 +124,7 @@ def summarize_trial(root: Path, group: str, trial: str) -> dict:
     run_text = run_log.read_text(errors="ignore") if run_log.exists() else ""
 
     disamb_blocks = extract_disambiguation_blocks(total_text)
+    ambiguous_blocks = extract_ambiguous_search_blocks(total_text)
     selected_lines = [line for line in action_text.splitlines() if "Disambiguation:" in line]
     completion_present = "bug_locations" in (output_path.read_text(errors="ignore") if output_path.exists() else "")
 
@@ -130,6 +139,7 @@ def summarize_trial(root: Path, group: str, trial: str) -> dict:
         "model_functions": sorted(funcs),
         "model_locations": locations,
         "disambiguation_message_count": len(disamb_blocks),
+        "ambiguous_search_message_count": len(ambiguous_blocks),
         "selected_disambiguation_action_count": len(selected_lines),
         "selected_disambiguation_actions": selected_lines,
         "api_errors": count_api_errors(total_text + "\n" + run_text),
@@ -152,10 +162,9 @@ def main() -> None:
 
     rows = []
     runs_root = root / "work" / "django11999_stability" / "runs"
-    for group in ["standard", "no_disamb"]:
+    groups = [path.name for path in sorted(runs_root.iterdir()) if path.is_dir()] if runs_root.exists() else []
+    for group in groups:
         group_dir = runs_root / group
-        if not group_dir.exists():
-            continue
         for trial_dir in sorted(group_dir.glob("trial_*")):
             if trial_dir.is_dir():
                 rows.append(summarize_trial(root, group, trial_dir.name))
@@ -170,7 +179,7 @@ def main() -> None:
         "by_group": {},
         "trials": rows,
     }
-    for group in ["standard", "no_disamb"]:
+    for group in groups:
         group_rows = [row for row in rows if row["group"] == group]
         if not group_rows:
             continue
@@ -179,11 +188,23 @@ def main() -> None:
             "file_match": sum(row["file_match"] for row in group_rows),
             "function_match": sum(row["function_match"] for row in group_rows),
             "total": len(group_rows),
+            "input_tokens_logged": sum(
+                row["token_count"]["input_tokens_logged"] for row in group_rows
+            ),
+            "output_tokens_logged": sum(
+                row["token_count"]["output_tokens_logged"] for row in group_rows
+            ),
+            "total_tokens_logged": sum(
+                row["token_count"]["total_tokens_logged"] for row in group_rows
+            ),
             "selected_disambiguation_actions": sum(
                 row["selected_disambiguation_action_count"] for row in group_rows
             ),
             "disambiguation_messages": sum(
                 row["disambiguation_message_count"] for row in group_rows
+            ),
+            "ambiguous_search_messages": sum(
+                row["ambiguous_search_message_count"] for row in group_rows
             ),
             "api_retry_messages": sum(
                 row["api_errors"]["retry_messages"] for row in group_rows
@@ -197,6 +218,7 @@ def main() -> None:
     with csv_path.open("w", newline="") as handle:
         writer = csv.DictWriter(
             handle,
+            lineterminator="\n",
             fieldnames=[
                 "group",
                 "trial",
@@ -204,6 +226,7 @@ def main() -> None:
                 "file_match",
                 "function_match",
                 "disambiguation_message_count",
+                "ambiguous_search_message_count",
                 "selected_disambiguation_action_count",
                 "model_files",
                 "model_functions",
@@ -219,6 +242,9 @@ def main() -> None:
                     "file_match": row["file_match"],
                     "function_match": row["function_match"],
                     "disambiguation_message_count": row["disambiguation_message_count"],
+                    "ambiguous_search_message_count": row[
+                        "ambiguous_search_message_count"
+                    ],
                     "selected_disambiguation_action_count": row[
                         "selected_disambiguation_action_count"
                     ],

@@ -1,0 +1,185 @@
+[2026-07-30 08:23:51,221 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display', 'file_path': 'django/db/models/fields/__init__.py'}
+)
+[2026-07-30 08:25:17,271 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_class
+Search Action Input: {'class_name': 'Model', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+)
+[2026-07-30 08:26:53,481 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:27:09,462 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': 'contribute_to_class', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}
+)
+[2026-07-30 08:27:28,488 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_check_null_allowed_for_primary_keys', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}
+)
+[2026-07-30 08:27:37,249 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:27:50,835 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FIELD_display'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:28:14,487 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': '__init__.py', 'directory_path': 'django/db/models/fields'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:29:17,492 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Field', 'method_name': '_description', 'file_path': 'django/db/models/fields/__init__.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:30:29,135 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '__hash__', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:30:36,039 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'refresh_from_db', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:30:48,057 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 5, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': 'serializable_value', 'file_path': 'django/db/models/base.py'}
+  Value: 5, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:30:54,210 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 6, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)

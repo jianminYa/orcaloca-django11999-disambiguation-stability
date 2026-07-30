@@ -2,15 +2,19 @@
   "instance_id": "django__django-11999",
   "gold_file": "django/db/models/fields/__init__.py",
   "gold_function": "django/db/models/fields/__init__.py:Field.contribute_to_class",
-  "trial_count": 10,
+  "trial_count": 15,
   "by_group": {
-    "standard": {
+    "hidden_candidate_info": {
       "completed": 5,
-      "file_match": 4,
-      "function_match": 4,
+      "file_match": 3,
+      "function_match": 3,
       "total": 5,
-      "selected_disambiguation_actions": 1,
-      "disambiguation_messages": 1,
+      "input_tokens_logged": 473690,
+      "output_tokens_logged": 20848,
+      "total_tokens_logged": 494538,
+      "selected_disambiguation_actions": 0,
+      "disambiguation_messages": 0,
+      "ambiguous_search_messages": 1,
       "api_retry_messages": 0
     },
     "no_disamb": {
@@ -18,12 +22,586 @@
       "file_match": 5,
       "function_match": 5,
       "total": 5,
+      "input_tokens_logged": 516860,
+      "output_tokens_logged": 19876,
+      "total_tokens_logged": 536736,
       "selected_disambiguation_actions": 0,
       "disambiguation_messages": 2,
+      "ambiguous_search_messages": 0,
+      "api_retry_messages": 0
+    },
+    "standard": {
+      "completed": 5,
+      "file_match": 4,
+      "function_match": 4,
+      "total": 5,
+      "input_tokens_logged": 785943,
+      "output_tokens_logged": 26840,
+      "total_tokens_logged": 812783,
+      "selected_disambiguation_actions": 1,
+      "disambiguation_messages": 1,
+      "ambiguous_search_messages": 0,
       "api_retry_messages": 0
     }
   },
   "trials": [
+    {
+      "group": "hidden_candidate_info",
+      "trial": "trial_01",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:Model",
+        "django/db/models/base.py:Model._get_FIELD_display",
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "Model",
+          "method_name": "_get_FIELD_display"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 1,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 75,
+        "502": 2,
+        "503": 1,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 139863,
+        "output_tokens_logged": 5735,
+        "total_tokens_logged": 145598
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/hidden_candidate_info/trial_01/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/hidden_candidate_info/trial_01/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/hidden_candidate_info/trial_01/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/hidden_candidate_info/trial_01/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "hidden_candidate_info",
+      "trial": "trial_02",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 30,
+        "502": 1,
+        "503": 0,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 91914,
+        "output_tokens_logged": 3071,
+        "total_tokens_logged": 94985
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/hidden_candidate_info/trial_02/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/hidden_candidate_info/trial_02/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/hidden_candidate_info/trial_02/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/hidden_candidate_info/trial_02/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "hidden_candidate_info",
+      "trial": "trial_03",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:Model",
+        "django/db/models/base.py:Model._get_FIELD_display",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "Model",
+          "method_name": "_get_FIELD_display"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 32,
+        "502": 0,
+        "503": 0,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 140155,
+        "output_tokens_logged": 5337,
+        "total_tokens_logged": 145492
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/hidden_candidate_info/trial_03/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/hidden_candidate_info/trial_03/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/hidden_candidate_info/trial_03/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/hidden_candidate_info/trial_03/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "hidden_candidate_info",
+      "trial": "trial_04",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": false,
+      "function_match": false,
+      "model_files": [
+        "django/db/models/base.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/base.py:ModelBase._prepare",
+        "django/db/models/base.py:ModelBase.add_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "_prepare"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "add_to_class"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 30,
+        "502": 0,
+        "503": 0,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 46648,
+        "output_tokens_logged": 2859,
+        "total_tokens_logged": 49507
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/hidden_candidate_info/trial_04/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/hidden_candidate_info/trial_04/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/hidden_candidate_info/trial_04/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/hidden_candidate_info/trial_04/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "hidden_candidate_info",
+      "trial": "trial_05",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": false,
+      "function_match": false,
+      "model_files": [
+        "django/db/models/base.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/base.py:ModelBase._prepare",
+        "django/db/models/base.py:ModelBase.add_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "add_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "_prepare"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 30,
+        "502": 0,
+        "503": 1,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 55110,
+        "output_tokens_logged": 3846,
+        "total_tokens_logged": 58956
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/hidden_candidate_info/trial_05/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/hidden_candidate_info/trial_05/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/hidden_candidate_info/trial_05/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/hidden_candidate_info/trial_05/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "no_disamb",
+      "trial": "trial_01",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/base.py:ModelBase._prepare",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "_prepare"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 46,
+        "502": 0,
+        "503": 1,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 133378,
+        "output_tokens_logged": 4755,
+        "total_tokens_logged": 138133
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "no_disamb",
+      "trial": "trial_02",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:Model",
+        "django/db/models/base.py:Model._get_FIELD_display",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "Model",
+          "method_name": "_get_FIELD_display"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 29,
+        "502": 1,
+        "503": 1,
+        "timeout": 3,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 118938,
+        "output_tokens_logged": 2980,
+        "total_tokens_logged": 121918
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "no_disamb",
+      "trial": "trial_03",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:Model",
+        "django/db/models/base.py:Model._get_FIELD_display",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "Model",
+          "method_name": "_get_FIELD_display"
+        }
+      ],
+      "disambiguation_message_count": 1,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 74,
+        "502": 0,
+        "503": 1,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 62498,
+        "output_tokens_logged": 3430,
+        "total_tokens_logged": 65928
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "no_disamb",
+      "trial": "trial_04",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:Model",
+        "django/db/models/base.py:Model._get_FIELD_display",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "Model",
+          "method_name": "_get_FIELD_display"
+        }
+      ],
+      "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 55,
+        "502": 0,
+        "503": 0,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 96111,
+        "output_tokens_logged": 3770,
+        "total_tokens_logged": 99881
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
+    {
+      "group": "no_disamb",
+      "trial": "trial_05",
+      "completed": true,
+      "json_has_bug_locations": true,
+      "file_match": true,
+      "function_match": true,
+      "model_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "model_functions": [
+        "django/db/models/base.py:ModelBase",
+        "django/db/models/base.py:ModelBase.__new__",
+        "django/db/models/base.py:ModelBase.add_to_class",
+        "django/db/models/fields/__init__.py:Field",
+        "django/db/models/fields/__init__.py:Field.contribute_to_class"
+      ],
+      "model_locations": [
+        {
+          "file_path": "django/db/models/fields/__init__.py",
+          "class_name": "Field",
+          "method_name": "contribute_to_class"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "__new__"
+        },
+        {
+          "file_path": "django/db/models/base.py",
+          "class_name": "ModelBase",
+          "method_name": "add_to_class"
+        }
+      ],
+      "disambiguation_message_count": 1,
+      "ambiguous_search_message_count": 0,
+      "selected_disambiguation_action_count": 0,
+      "selected_disambiguation_actions": [],
+      "api_errors": {
+        "retry_messages": 0,
+        "429": 60,
+        "502": 0,
+        "503": 0,
+        "timeout": 0,
+        "openai_error": 0
+      },
+      "token_count": {
+        "input_tokens_logged": 105935,
+        "output_tokens_logged": 4941,
+        "total_tokens_logged": 110876
+      },
+      "log_paths": {
+        "output_json": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
+        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/orcar_total.log",
+        "action_history": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/action_history.log",
+        "search_agent": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
+      }
+    },
     {
       "group": "standard",
       "trial": "trial_01",
@@ -46,6 +624,7 @@
         }
       ],
       "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
       "selected_disambiguation_action_count": 0,
       "selected_disambiguation_actions": [],
       "api_errors": {
@@ -98,6 +677,7 @@
         }
       ],
       "disambiguation_message_count": 1,
+      "ambiguous_search_message_count": 0,
       "selected_disambiguation_action_count": 1,
       "selected_disambiguation_actions": [
         "[2026-07-29 14:53:07,923 - action_history - INFO] Disambiguation: [SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/contrib/gis/gdal/field.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/db/models/fields/__init__.py'}), SearchActionStep(search_action='search_class', search_action_input={'class_name': 'Field', 'file_path': 'django/forms/fields.py'})]"
@@ -158,6 +738,7 @@
         }
       ],
       "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
       "selected_disambiguation_action_count": 0,
       "selected_disambiguation_actions": [],
       "api_errors": {
@@ -210,6 +791,7 @@
         }
       ],
       "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
       "selected_disambiguation_action_count": 0,
       "selected_disambiguation_actions": [],
       "api_errors": {
@@ -261,6 +843,7 @@
         }
       ],
       "disambiguation_message_count": 0,
+      "ambiguous_search_message_count": 0,
       "selected_disambiguation_action_count": 0,
       "selected_disambiguation_actions": [],
       "api_errors": {
@@ -281,278 +864,6 @@
         "orcar_total": "work/django11999_stability/runs/standard/trial_05/OrcaLoca/log/django__django-11999/orcar_total.log",
         "action_history": "work/django11999_stability/runs/standard/trial_05/OrcaLoca/log/django__django-11999/action_history.log",
         "search_agent": "work/django11999_stability/runs/standard/trial_05/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
-      }
-    },
-    {
-      "group": "no_disamb",
-      "trial": "trial_01",
-      "completed": true,
-      "json_has_bug_locations": true,
-      "file_match": true,
-      "function_match": true,
-      "model_files": [
-        "django/db/models/base.py",
-        "django/db/models/fields/__init__.py"
-      ],
-      "model_functions": [
-        "django/db/models/base.py:ModelBase",
-        "django/db/models/base.py:ModelBase.__new__",
-        "django/db/models/base.py:ModelBase._prepare",
-        "django/db/models/fields/__init__.py:Field",
-        "django/db/models/fields/__init__.py:Field.contribute_to_class"
-      ],
-      "model_locations": [
-        {
-          "file_path": "django/db/models/fields/__init__.py",
-          "class_name": "Field",
-          "method_name": "contribute_to_class"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "ModelBase",
-          "method_name": "__new__"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "ModelBase",
-          "method_name": "_prepare"
-        }
-      ],
-      "disambiguation_message_count": 0,
-      "selected_disambiguation_action_count": 0,
-      "selected_disambiguation_actions": [],
-      "api_errors": {
-        "retry_messages": 0,
-        "429": 46,
-        "502": 0,
-        "503": 1,
-        "timeout": 0,
-        "openai_error": 0
-      },
-      "token_count": {
-        "input_tokens_logged": 133378,
-        "output_tokens_logged": 4755,
-        "total_tokens_logged": 138133
-      },
-      "log_paths": {
-        "output_json": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
-        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/orcar_total.log",
-        "action_history": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/action_history.log",
-        "search_agent": "work/django11999_stability/runs/no_disamb/trial_01/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
-      }
-    },
-    {
-      "group": "no_disamb",
-      "trial": "trial_02",
-      "completed": true,
-      "json_has_bug_locations": true,
-      "file_match": true,
-      "function_match": true,
-      "model_files": [
-        "django/db/models/base.py",
-        "django/db/models/fields/__init__.py"
-      ],
-      "model_functions": [
-        "django/db/models/base.py:Model",
-        "django/db/models/base.py:Model._get_FIELD_display",
-        "django/db/models/fields/__init__.py:Field",
-        "django/db/models/fields/__init__.py:Field.contribute_to_class"
-      ],
-      "model_locations": [
-        {
-          "file_path": "django/db/models/fields/__init__.py",
-          "class_name": "Field",
-          "method_name": "contribute_to_class"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "Model",
-          "method_name": "_get_FIELD_display"
-        }
-      ],
-      "disambiguation_message_count": 0,
-      "selected_disambiguation_action_count": 0,
-      "selected_disambiguation_actions": [],
-      "api_errors": {
-        "retry_messages": 0,
-        "429": 29,
-        "502": 1,
-        "503": 1,
-        "timeout": 3,
-        "openai_error": 0
-      },
-      "token_count": {
-        "input_tokens_logged": 118938,
-        "output_tokens_logged": 2980,
-        "total_tokens_logged": 121918
-      },
-      "log_paths": {
-        "output_json": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
-        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/orcar_total.log",
-        "action_history": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/action_history.log",
-        "search_agent": "work/django11999_stability/runs/no_disamb/trial_02/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
-      }
-    },
-    {
-      "group": "no_disamb",
-      "trial": "trial_03",
-      "completed": true,
-      "json_has_bug_locations": true,
-      "file_match": true,
-      "function_match": true,
-      "model_files": [
-        "django/db/models/base.py",
-        "django/db/models/fields/__init__.py"
-      ],
-      "model_functions": [
-        "django/db/models/base.py:Model",
-        "django/db/models/base.py:Model._get_FIELD_display",
-        "django/db/models/fields/__init__.py:Field",
-        "django/db/models/fields/__init__.py:Field.contribute_to_class"
-      ],
-      "model_locations": [
-        {
-          "file_path": "django/db/models/fields/__init__.py",
-          "class_name": "Field",
-          "method_name": "contribute_to_class"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "Model",
-          "method_name": "_get_FIELD_display"
-        }
-      ],
-      "disambiguation_message_count": 1,
-      "selected_disambiguation_action_count": 0,
-      "selected_disambiguation_actions": [],
-      "api_errors": {
-        "retry_messages": 0,
-        "429": 74,
-        "502": 0,
-        "503": 1,
-        "timeout": 0,
-        "openai_error": 0
-      },
-      "token_count": {
-        "input_tokens_logged": 62498,
-        "output_tokens_logged": 3430,
-        "total_tokens_logged": 65928
-      },
-      "log_paths": {
-        "output_json": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
-        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/orcar_total.log",
-        "action_history": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/action_history.log",
-        "search_agent": "work/django11999_stability/runs/no_disamb/trial_03/OrcaLoca/log_1/django__django-11999/Orcar.search_agent.log"
-      }
-    },
-    {
-      "group": "no_disamb",
-      "trial": "trial_04",
-      "completed": true,
-      "json_has_bug_locations": true,
-      "file_match": true,
-      "function_match": true,
-      "model_files": [
-        "django/db/models/base.py",
-        "django/db/models/fields/__init__.py"
-      ],
-      "model_functions": [
-        "django/db/models/base.py:Model",
-        "django/db/models/base.py:Model._get_FIELD_display",
-        "django/db/models/fields/__init__.py:Field",
-        "django/db/models/fields/__init__.py:Field.contribute_to_class"
-      ],
-      "model_locations": [
-        {
-          "file_path": "django/db/models/fields/__init__.py",
-          "class_name": "Field",
-          "method_name": "contribute_to_class"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "Model",
-          "method_name": "_get_FIELD_display"
-        }
-      ],
-      "disambiguation_message_count": 0,
-      "selected_disambiguation_action_count": 0,
-      "selected_disambiguation_actions": [],
-      "api_errors": {
-        "retry_messages": 0,
-        "429": 55,
-        "502": 0,
-        "503": 0,
-        "timeout": 0,
-        "openai_error": 0
-      },
-      "token_count": {
-        "input_tokens_logged": 96111,
-        "output_tokens_logged": 3770,
-        "total_tokens_logged": 99881
-      },
-      "log_paths": {
-        "output_json": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
-        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/orcar_total.log",
-        "action_history": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/action_history.log",
-        "search_agent": "work/django11999_stability/runs/no_disamb/trial_04/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
-      }
-    },
-    {
-      "group": "no_disamb",
-      "trial": "trial_05",
-      "completed": true,
-      "json_has_bug_locations": true,
-      "file_match": true,
-      "function_match": true,
-      "model_files": [
-        "django/db/models/base.py",
-        "django/db/models/fields/__init__.py"
-      ],
-      "model_functions": [
-        "django/db/models/base.py:ModelBase",
-        "django/db/models/base.py:ModelBase.__new__",
-        "django/db/models/base.py:ModelBase.add_to_class",
-        "django/db/models/fields/__init__.py:Field",
-        "django/db/models/fields/__init__.py:Field.contribute_to_class"
-      ],
-      "model_locations": [
-        {
-          "file_path": "django/db/models/fields/__init__.py",
-          "class_name": "Field",
-          "method_name": "contribute_to_class"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "ModelBase",
-          "method_name": "__new__"
-        },
-        {
-          "file_path": "django/db/models/base.py",
-          "class_name": "ModelBase",
-          "method_name": "add_to_class"
-        }
-      ],
-      "disambiguation_message_count": 1,
-      "selected_disambiguation_action_count": 0,
-      "selected_disambiguation_actions": [],
-      "api_errors": {
-        "retry_messages": 0,
-        "429": 60,
-        "502": 0,
-        "503": 0,
-        "timeout": 0,
-        "openai_error": 0
-      },
-      "token_count": {
-        "input_tokens_logged": 105935,
-        "output_tokens_logged": 4941,
-        "total_tokens_logged": 110876
-      },
-      "log_paths": {
-        "output_json": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/output/django__django-11999/searcher_django__django-11999.json",
-        "orcar_total": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/orcar_total.log",
-        "action_history": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/action_history.log",
-        "search_agent": "work/django11999_stability/runs/no_disamb/trial_05/OrcaLoca/log/django__django-11999/Orcar.search_agent.log"
       }
     }
   ]

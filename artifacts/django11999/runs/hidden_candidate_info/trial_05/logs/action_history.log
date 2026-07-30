@@ -1,0 +1,129 @@
+[2026-07-30 08:36:54,660 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 1
+)
+[2026-07-30 08:37:09,677 - action_history - INFO] Top class methods: [SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}), SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}), SearchActionStep(search_action='search_method_in_class', search_action_input={'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'})]
+[2026-07-30 08:37:15,037 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 1
+)
+[2026-07-30 08:37:19,266 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 3
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 2
+)
+[2026-07-30 08:37:29,166 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+)
+[2026-07-30 08:37:32,458 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 3
+)
+[2026-07-30 08:37:41,980 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 5
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 4
+)
+[2026-07-30 08:37:46,805 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 5
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 5
+)
+[2026-07-30 08:38:53,907 - action_history - DEBUG] Action history: 
+ SearchActionHistory(
+  Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}: 1
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}: 2
+  Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}: 3
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}: 4
+  Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}: 5
+  Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}: 5
+)

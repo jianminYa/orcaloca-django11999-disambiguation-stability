@@ -1,0 +1,69 @@
+[2026-07-30 08:37:07,441 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 1, Action: Search Action: search_class
+Search Action Input: {'class_name': 'ModelBase', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 1, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}
+)
+[2026-07-30 08:37:16,006 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'Model', 'method_name': '_get_FIELD_display', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:37:20,388 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 3, Action: Search Action: search_callable
+Search Action Input: {'query_name': 'get_FOO_display'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 2, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:37:30,250 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '_prepare', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:37:33,442 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': '__new__', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 3, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:37:42,798 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 5, Action: Search Action: search_method_in_class
+Search Action Input: {'class_name': 'ModelBase', 'method_name': 'add_to_class', 'file_path': 'django/db/models/base.py'}
+  Value: 4, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)
+[2026-07-30 08:37:47,743 - search_queue - DEBUG] search queue: 
+ SearchQueue(
+  Value: 5, Action: Search Action: search_file_contents
+Search Action Input: {'file_name': 'base.py', 'directory_path': 'django/db/models'}
+)

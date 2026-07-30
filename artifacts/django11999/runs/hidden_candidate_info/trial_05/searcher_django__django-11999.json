@@ -1,0 +1,20 @@
+{
+    "conclusion": "<Observation>\nThe current evidence makes ModelBase.__new__ the primary suspect. It collects contributable attributes, creates the class, then later calls _prepare, but nothing here explicitly protects a user-defined get_<field>_display override from being shadowed by any auto-generated display accessor. Model.add_to_class is just a thin setattr/contribute_to_class wrapper, so the regression likely comes from class construction order or later method injection around model preparation rather than from _get_FIELD_display itself.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "add_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "_prepare"
+        }
+    ]
+}

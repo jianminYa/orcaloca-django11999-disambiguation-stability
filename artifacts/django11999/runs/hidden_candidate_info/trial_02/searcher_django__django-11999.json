@@ -1,0 +1,15 @@
+{
+    "conclusion": "<Observation>\nThe regression is now well localized: `Field.contribute_to_class()` unconditionally installs `get_%s_display` for choice fields, which can overwrite a model-defined `get_foo_bar_display()` during class construction. `ModelBase.__new__()` is the surrounding creation path, but the overwrite behavior is directly implemented in the field contribution step.\n</Observation>",
+    "bug_locations": [
+        {
+            "file_path": "django/db/models/fields/__init__.py",
+            "class_name": "Field",
+            "method_name": "contribute_to_class"
+        },
+        {
+            "file_path": "django/db/models/base.py",
+            "class_name": "ModelBase",
+            "method_name": "__new__"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+{"query_kind": "class", "query": "Options", "candidate_count": 2, "candidates": [{"type": "class", "file_path": "django/db/models/options.py", "class_name": null}, {"type": "class", "file_path": "django/core/cache/backends/db.py", "class_name": null}]}

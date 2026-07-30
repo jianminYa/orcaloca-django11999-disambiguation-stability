@@ -1,0 +1,309 @@
+===== hidden_candidate_info trial_02 =====
+Instance: django__django-11999
+Dataset: SWE-bench_common / test
+Model: gpt-5.4-mini
+Max tokens: 4096
+Base URL source: OPENAI_BASE_URL
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform_v1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform_v1beta1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform_v1beta1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.resourcemanager_v3 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.resourcemanager_v3 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1.schema.predict.instance_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1.schema.predict.instance_v1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1.schema.predict.params_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1.schema.predict.params_v1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1.schema.predict.prediction_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1.schema.predict.prediction_v1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1.schema.trainingjob.definition_v1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1.schema.trainingjob.definition_v1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1beta1.schema.predict.instance_v1beta1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1beta1.schema.predict.instance_v1beta1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1beta1.schema.predict.params_v1beta1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1beta1.schema.predict.params_v1beta1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1beta1.schema.predict.prediction_v1beta1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1beta1.schema.predict.prediction_v1beta1 past that date.
+  warnings.warn(message, FutureWarning)
+[CONDA_PREFIX]/envs/orca/lib/python3.10/site-packages/google/api_core/_python_version_support.py:255: FutureWarning: You are using a Python version (3.10.20) which Google will stop supporting in new releases of google.cloud.aiplatform.v1beta1.schema.trainingjob.definition_v1beta1 once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.cloud.aiplatform.v1beta1.schema.trainingjob.definition_v1beta1 past that date.
+  warnings.warn(message, FutureWarning)
+2026-07-30 08:17:37,231 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:17:38,083 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/json/json.py "HTTP/1.1 200 OK"
+
+Generating test split: 0 examples [00:00, ? examples/s]
+Generating test split: 93 examples [00:00, 2974.52 examples/s]
+
+Filter:   0%|          | 0/93 [00:00<?, ? examples/s]
+Filter: 100%|██████████| 93/93 [00:00<00:00, 8289.67 examples/s]
+INFO     Found image hejiaz/swe-agent:latest with tags:                         
+         ['hejiaz/swe-agent:latest'], created: 2024-08-23T00:14:47.243325975Z   
+         for linux amd64.                                                       
+DEBUG    Starting container with command: docker exec -i                        
+         orcar_django11999_hidden_candidate_info_warm_ctr /bin/bash -l          
+INFO     Current trace_analyzer container subprocess: 2325396                   
+INFO     Found tokenizer for model 'gpt-5.4-mini'                               
+2026-07-30 08:18:14,437 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:18:18,467 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:18:36,430 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:18:41,230 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:18:42,686 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:00,309 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:00,555 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-07-30 08:19:00,795 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 200 OK"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-30 08:19:00,796 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-07-30 08:19:01,036 - httpx - INFO - HTTP Request: GET https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:01,295 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:01,537 - httpx - INFO - HTTP Request: GET https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:01,806 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 08:19:02,061 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-07-30 08:19:02,294 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-07-30 08:19:02,543 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/google-bert/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-07-30 08:19:02,783 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt "HTTP/1.1 200 OK"
+2026-07-30 08:19:03,021 - httpx - INFO - HTTP Request: GET https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt "HTTP/1.1 200 OK"
+2026-07-30 08:19:03,279 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:03,530 - httpx - INFO - HTTP Request: GET https://huggingface.co/bert-base-uncased/resolve/main/tokenizer.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:04,071 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-07-30 08:19:04,311 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/special_tokens_map.json "HTTP/1.1 404 Not Found"
+2026-07-30 08:19:04,552 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-07-30 08:19:05,006 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-07-30 08:19:05,547 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:19:13,023 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:13,661 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:24,755 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:24,882 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:28,284 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:38,380 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:38,401 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:38,411 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:38,417 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:38,422 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:38,567 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:19:52,803 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:52,824 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:52,836 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:52,842 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:52,849 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:19:53,018 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:19:56,407 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:56,659 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:56,916 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:56,969 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:57,493 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:57,998 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:58,177 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:19:59,123 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:00,044 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:00,582 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,470 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,535 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,582 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,635 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,888 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:02,973 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:03,455 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:03,909 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:05,303 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:06,304 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:08,158 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:08,215 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:08,375 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:08,878 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:09,017 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:09,076 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:09,122 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:09,447 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:12,819 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:12,902 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:14,636 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:14,751 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:14,793 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,055 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,075 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,101 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,118 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,277 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,288 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:15,780 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:17,158 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:17,627 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:17,864 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,114 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,277 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,347 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,416 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,440 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:18,449 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:19,876 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:21,368 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:22,017 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:22,198 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:22,710 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:23,698 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:24,132 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:24,162 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:25,294 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:28,062 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:28,582 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:45,221 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:20:45,242 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:20:45,263 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:20:45,271 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:20:45,279 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:20:45,478 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:21:08,606 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:08,626 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:08,637 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:08,644 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:08,650 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:08,819 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:21:11,934 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:12,093 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:12,246 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:12,615 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:12,811 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:13,631 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:13,693 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:14,683 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:14,835 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:28,117 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:28,138 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:28,149 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:28,156 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:28,163 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:28,351 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:21:31,404 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:31,473 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:31,590 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:31,686 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:32,316 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:32,583 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:32,967 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:33,037 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:33,410 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:34,310 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,241 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,371 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,562 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,604 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,730 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:36,753 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:37,168 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:37,990 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:39,174 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:41,061 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:42,914 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,007 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,111 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,155 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,244 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,299 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,328 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:43,669 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:46,502 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:48,445 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:50,175 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:51,575 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:58,591 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+2026-07-30 08:21:58,611 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:58,621 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/tokenizer_config.json "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:58,628 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:58,635 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/bert-base-uncased/tree/main?recursive=true&expand=false "HTTP/1.1 429 Too Many Requests"
+2026-07-30 08:21:58,825 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json "HTTP/1.1 429 Too Many Requests"
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2026-07-30 08:22:03,471 - httpx - INFO - HTTP Request: POST [OPENAI_COMPATIBLE_ENDPOINT]/chat/completions "HTTP/1.1 200 OK"
+(001/001) Current inst: django__django-11999
+
+Filter:   0%|          | 0/1 [00:00<?, ? examples/s]
+Filter: 100%|██████████| 1/1 [00:00<00:00, 117.64 examples/s]

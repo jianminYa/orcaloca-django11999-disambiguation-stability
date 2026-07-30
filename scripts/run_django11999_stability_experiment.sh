@@ -89,16 +89,15 @@ prepare_worktree() {
   local orca_dir="$exp_dir/OrcaLoca"
 
   mkdir -p "$exp_dir"
-  if [ ! -d "$orca_dir" ]; then
-    rsync -a \
-      --exclude '.git/' \
-      --exclude '__pycache__/' \
-      --exclude '*.pyc' \
-      --exclude 'key.cfg' \
-      --exclude 'log/' \
-      --exclude 'output/' \
-      "$SOURCE_ORCA/" "$orca_dir/"
-  fi
+  mkdir -p "$orca_dir"
+  rsync -a \
+    --exclude '.git/' \
+    --exclude '__pycache__/' \
+    --exclude '*.pyc' \
+    --exclude 'key.cfg' \
+    --exclude 'log/' \
+    --exclude 'output/' \
+    "$SOURCE_ORCA/" "$orca_dir/"
   cp "$config_path" "$orca_dir/Orcar/search.cfg"
 
   umask 077
@@ -118,6 +117,7 @@ run_trial() {
   local trial
   trial="$(printf 'trial_%02d' "$trial_num")"
   local config_path
+  local hide_candidates="0"
   local ctr
   local exp_dir="$WORK_ROOT/runs/$group/$trial"
   local orca_dir="$exp_dir/OrcaLoca"
@@ -130,6 +130,10 @@ run_trial() {
       ;;
     no_disamb)
       config_path="$ROOT_DIR/configs/search_no_disamb.cfg"
+      ;;
+    hidden_candidate_info)
+      config_path="$ROOT_DIR/configs/search_hidden_candidate_info.cfg"
+      hide_candidates="1"
       ;;
     *)
       echo "Unknown group: $group" >&2
@@ -166,6 +170,8 @@ run_trial() {
       ORCAR_LLM_MAX_RETRY="${ORCAR_LLM_MAX_RETRY:-10}" \
       ORCAR_LLM_RETRY_DELAY="${ORCAR_LLM_RETRY_DELAY:-2}" \
       ORCAR_LLM_RETRY_DELAY_MAX="${ORCAR_LLM_RETRY_DELAY_MAX:-45}" \
+      ORCALOCA_HIDE_DISAMBIGUATION_CANDIDATES="$hide_candidates" \
+      ORCALOCA_HIDDEN_DISAMBIGUATION_LOG="$exp_dir/hidden_disambiguation_candidates.jsonl" \
       PYTHONPATH="$orca_dir:${PYTHONPATH:-}" \
       "$PYTHON_BIN" evaluation/run.py \
         -cfg "$orca_dir/key.cfg" \

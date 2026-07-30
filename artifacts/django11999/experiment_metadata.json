@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-07-29T14:15:56.820853+00:00",
+  "created_at_utc": "2026-07-30T08:16:56.807962+00:00",
   "instance_id": "django__django-11999",
   "dataset": "SWE-bench_common",
   "split": "test",
@@ -7,15 +7,15 @@
   "max_tokens": 4096,
   "trials_per_group": 5,
   "container_mode": "one warm persistent container per group",
-  "reset_warm_containers": true,
+  "reset_warm_containers": false,
   "run_groups": [
-    "standard",
-    "no_disamb"
+    "hidden_candidate_info"
   ],
   "python_bin": "[CONDA_PREFIX]/envs/orca/bin/python",
   "python_version": "3.10.20",
   "base_url_source": "OPENAI_BASE_URL",
   "base_url_present": true,
   "api_key_present": true,
-  "git_source_commit": "source copy without .git"
+  "git_source_commit": "55e91f9cb9e2ec673d5d26a0c0cabc8e48e15282",
+  "source_tree_note": "The hidden_candidate_info trials used the working-tree hidden-candidate patch that is committed in this repository after the run; this field was captured before that commit existed."
 }
