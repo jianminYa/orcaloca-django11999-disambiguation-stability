@@ -1,5 +1,7 @@
 # OrcaLoca django__django-11999 Disambiguation Stability Study
 
+[中文 README](README_zh.md)
+
 This repository contains a focused OrcaLoca localization study for
 `django__django-11999`. It was created to answer two narrow reproduction
 questions:
